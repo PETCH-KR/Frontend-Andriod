@@ -19,10 +19,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        if(v?.id == R.id.button){
-            var intent = Intent(this, SubActivity::class.java)
-            intent.putExtra("text",editText.text.toString())
-            startActivity(intent)
+
+        when(v?.id){
+            R.id.button -> {
+                var intent = Intent(this, SubActivity::class.java)
+                intent.putExtra("text",editText.text.toString())
+                startActivity(intent)
+
+                overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_in_right)
+            }
         }
     }
 }

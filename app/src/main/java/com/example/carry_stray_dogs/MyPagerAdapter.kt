@@ -20,23 +20,28 @@ class MyPagerAdapter(var context: Context) : PagerAdapter()  {
         var inflater = LayoutInflater.from(context)
         view = inflater.inflate(R.layout.pager_item,container,false);
         var imageView = view.findViewById<ImageView>(R.id.imageView)
+        var goBtn = view.findViewById<ImageButton>(R.id.playbtn)
         var textView : TextView = view.findViewById(R.id.txt)
 
         if(position==0){
-            imageView.setImageResource(R.drawable.temp);
-            textView.text=""
+            imageView.setImageResource(R.drawable.splash_1);
+            textView.text="해외 이동 봉사란?"
+            goBtn.visibility = View.INVISIBLE
         }
         else if(position==1){
-            imageView.setImageResource(R.drawable.temp2);
-            textView.text=""
+            imageView.setImageResource(R.drawable.splash_2);
+            textView.text="나의 상황에 맞는 봉사하기"
+            goBtn.visibility = View.INVISIBLE
         }
         else if(position==2){
-            imageView.setImageResource(R.drawable.temp3);
-            textView.text=""
+            imageView.setImageResource(R.drawable.splash_3);
+            textView.text="쉽고 정확한 의사소통"
+            goBtn.visibility = View.INVISIBLE
         }
         else {
-            imageView.setImageResource(R.drawable.temp4);
-            textView.text=""
+            imageView.setImageResource(R.drawable.splash_4);
+            textView.text="Petch와 함께 이동 봉사 시작해보기!"
+            goBtn.visibility = View.VISIBLE
         }
 
         container.addView(view)

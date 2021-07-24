@@ -28,17 +28,5 @@
         android:id="@+id/view_pager"
         android:layout_marginBottom="50dp"/>
 
-    <ImageButton
-        android:id="@+id/skipBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/skip"
-        android:layout_marginLeft="330dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#00ff"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

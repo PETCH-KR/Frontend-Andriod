@@ -10,22 +10,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="7.5"
+            android:layout_weight="7"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="9"
-                android:layout_marginTop="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="7"
                 android:scaleType="fitCenter"
                 android:src="@drawable/splash_1" />
 
@@ -33,9 +35,9 @@
                 android:id="@+id/txt"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="1.3"
                 android:gravity="center"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
                 android:text="해외 이동 봉사란?"
                 android:textColor="#707070"
                 android:textSize="20dp"
@@ -45,8 +47,8 @@
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="3"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
                 android:src="@drawable/splash_blank" />
 
         </LinearLayout>
@@ -54,7 +56,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.3">
+            android:layout_weight="1.2"
+            android:layout_marginBottom="50dp">
 
             <ImageButton
                 android:id="@+id/playbtn"
@@ -63,6 +66,7 @@
                 android:layout_marginTop="20dp"
                 android:backgroundTint="#00ff"
                 android:scaleType="fitCenter"
+                android:onClick="onClink"
                 android:src="@drawable/splash_btn" />
 
         </LinearLayout>

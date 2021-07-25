@@ -1,6 +1,7 @@
 package com.example.carry_stray_dogs
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -9,11 +10,13 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.PagerAdapter
 
-class MyPagerAdapter(var context: Context) : PagerAdapter()  {
+class MyPagerAdapter(var context: Context) : PagerAdapter(){
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         var view : View ?=null;
@@ -22,6 +25,11 @@ class MyPagerAdapter(var context: Context) : PagerAdapter()  {
         var imageView = view.findViewById<ImageView>(R.id.imageView)
         var goBtn = view.findViewById<ImageButton>(R.id.playbtn)
         var textView : TextView = view.findViewById(R.id.txt)
+
+        goBtn.setOnClickListener {
+           // val intent = Intent(, LoginActivity::class.java)
+           // startActivity(intent)
+        }
 
         if(position==0){
             imageView.setImageResource(R.drawable.splash_1);

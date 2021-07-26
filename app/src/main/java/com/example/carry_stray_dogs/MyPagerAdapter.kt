@@ -27,18 +27,19 @@ class MyPagerAdapter(var context: Context) : PagerAdapter(){
         var textView : TextView = view.findViewById(R.id.txt)
 
         goBtn.setOnClickListener {
-           // val intent = Intent(, LoginActivity::class.java)
-           // startActivity(intent)
+            context.startActivity( Intent(context, LoginActivity::class.java))
         }
 
         if(position==0){
             imageView.setImageResource(R.drawable.splash_1);
             textView.text="해외 이동 봉사란?"
+
             goBtn.visibility = View.INVISIBLE
         }
         else if(position==1){
             imageView.setImageResource(R.drawable.splash_2);
             textView.text="나의 상황에 맞는 봉사하기"
+
             goBtn.visibility = View.INVISIBLE
         }
         else if(position==2){
@@ -56,6 +57,8 @@ class MyPagerAdapter(var context: Context) : PagerAdapter(){
 
         return view
     }
+
+
 
     override fun destroyItem(container: ViewGroup, position: Int, obj: Any) {
         container.removeView(obj as View?)

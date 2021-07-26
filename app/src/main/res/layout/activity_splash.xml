@@ -17,7 +17,9 @@
         android:id="@+id/tablayout"
         app:tabBackground="@drawable/dot_indicator"
         app:tabIndicatorHeight="0dp"
-        app:tabIndicatorGravity="center"/>
+        app:tabIndicatorGravity="center">
+    </com.google.android.material.tabs.TabLayout>
+
 
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
@@ -28,5 +30,22 @@
         android:id="@+id/view_pager"
         android:layout_marginBottom="50dp"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/skipBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:backgroundTint="#00ff"
+            android:layout_marginTop="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/splash_skip"
+            android:layout_marginRight="10dp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

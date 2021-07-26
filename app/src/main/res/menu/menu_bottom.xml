@@ -20,7 +20,7 @@
 
     <item android:id="@+id/mypage"
         app:showAsAction="ifRoom"
-        android:title="mypage"
+        android:title="my page"
         android:icon="@drawable/main_bottom_person"/>
 
 </menu>

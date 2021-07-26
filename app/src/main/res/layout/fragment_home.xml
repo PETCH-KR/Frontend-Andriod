@@ -1,17 +1,338 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:scrollbars="vertical"
     android:background="@android:color/white"
     tools:context=".Fragment_home">
 
-    <TextView
-        android:id="@+id/button"
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="home 준비중" />
+        android:background="#00ff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/FrameLayout01"
+        android:layout_width="wrap_content"
+        android:layout_height="320dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="280dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/home_img" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            app:srcCompat="@drawable/home_logo" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/home_ring"
+            android:layout_gravity="right|center"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff"/>
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="140dp"
+            app:srcCompat="@drawable/home_searchimg" />
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/search_view"
+            app:queryHint="찾아보기"
+            android:layout_marginTop="138dp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameLayout02"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/home_img2" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/home_img1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="42dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="해외 이동봉사 &#10;게임으로 체험해보기" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:layout_marginLeft="42dp"
+            android:textSize="10.5dp"
+            android:text="Petch의 봉사 체험을 통해 해외 이동 봉사가&#10;어떻게 진행되는지 알아보세요!" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            app:srcCompat="@drawable/home_game"
+            android:scaleType="fitCenter"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="22dp"
+            android:layout_marginBottom="35dp"
+            android:backgroundTint="#00ff" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:text="이동봉사를 기다리는 유기견" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.845"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:scrollbars="none"
+        android:scrollbarStyle="outsideInset"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/imgBtn1"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_marginRight="5dp"
+                android:padding="5sp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:background="@color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/imgBtn2"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:padding="5sp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/imgBtn3"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="6sp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageButton
+                android:id="@+id/imgBtn4"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:padding="5sp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:background="@color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/imgBtn5"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:padding="5sp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:background="@color/white"
+
+                />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:text="이동봉사 후기" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.845"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:scrollbarStyle="outsideInset"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/imgBtn6"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_marginRight="5dp"
+                android:padding="5sp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:background="@color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/imgBtn7"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:padding="5sp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/imgBtn8"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="6sp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageButton
+                android:id="@+id/imgBtn9"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:padding="5sp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:background="@color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/imgBtn10"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:padding="5sp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/home_img2"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:background="@color/white"
+
+                />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

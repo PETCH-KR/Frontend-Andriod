@@ -37,6 +37,12 @@ class FlightSearchActivity : AppCompatActivity(){
 
         start.setOnClickListener{
             val intent = Intent(this,ChooseLocationActivity::class.java)
+            intent.putExtra("flight","start")
+            startActivity(intent)
+        }
+        end.setOnClickListener{
+            val intent = Intent(this,ChooseLocationActivity::class.java)
+            intent.putExtra("flight","end")
             startActivity(intent)
         }
 

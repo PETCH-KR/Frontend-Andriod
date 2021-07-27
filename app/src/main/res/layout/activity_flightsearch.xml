@@ -119,12 +119,30 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="65dp"
-            android:layout_marginTop="150dp"
             android:layout_marginLeft="28dp"
+            android:layout_marginTop="150dp"
             android:layout_marginRight="28dp"
             android:backgroundTint="#00ff"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/flightsearch_calender"/>
+            app:srcCompat="@drawable/flightsearch_calender" />
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="180dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="28dp"
+            android:backgroundTint="#00ff"
+            android:layout_height="65dp"/>
+
+        <Button
+            android:id="@+id/end_btn"
+            android:layout_width="180dp"
+            android:layout_marginLeft="208dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="28dp"
+            android:backgroundTint="#00ff"
+            android:layout_height="65dp"/>
 
         <TextView
             android:id="@+id/start_date"

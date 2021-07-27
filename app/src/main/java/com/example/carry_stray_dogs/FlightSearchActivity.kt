@@ -32,7 +32,7 @@ class FlightSearchActivity : AppCompatActivity(){
         start_date.text = formatted.split("-")[0]+"."+formatted.split("-")[1]+"."+formatted.split("-")[2]
         end_date.text = formatted.split("-")[0]+"."+formatted.split("-")[1]+"."+formatted.split("-")[2]
         val minDate = Calendar.getInstance()
-        minDate.set(Integer.parseInt(formatted.split("-")[0]),Integer.parseInt(formatted.split("-")[1]),Integer.parseInt(formatted.split("-")[2]))
+        val minDate2 = Calendar.getInstance()
 
         swapBtn.setOnClickListener {
            val start = startText.text.toString()
@@ -66,9 +66,10 @@ class FlightSearchActivity : AppCompatActivity(){
             var year = calendar.get(Calendar.YEAR)
             var month = calendar.get(Calendar.MONTH)
             var day = calendar.get(Calendar.DAY_OF_MONTH)
-
-            var listener = DatePickerDialog.OnDateSetListener{_,i,i2,i3 -> start_date.text = ""+i+"."+i2+"."+i3 }
+            var listener = DatePickerDialog.OnDateSetListener{_,i,i2,i3 -> start_date.text = ""+i+"."+(i2+1)+"."+i3 }
             var picker = DatePickerDialog(this,listener,year,month,day)
+            //날짜 제한 기준 : 현재 날짜
+            minDate.set(Integer.parseInt(formatted.split("-")[0]),Integer.parseInt(formatted.split("-")[1])-1,Integer.parseInt(formatted.split("-")[2]))
             picker.getDatePicker().setMinDate(minDate.getTime().getTime())
             picker.show()
         }
@@ -78,10 +79,11 @@ class FlightSearchActivity : AppCompatActivity(){
             var year = calendar.get(Calendar.YEAR)
             var month = calendar.get(Calendar.MONTH)
             var day = calendar.get(Calendar.DAY_OF_MONTH)
-            var listener = DatePickerDialog.OnDateSetListener{_,i,i2,i3 -> end_date.text = ""+i+"."+i2+"."+i3 }
+            var listener = DatePickerDialog.OnDateSetListener{_,i,i2,i3 -> end_date.text = ""+i+"."+(i2+1)+"."+i3 }
             var picker = DatePickerDialog(this,listener,year,month,day)
-            minDate.set(Integer.parseInt(start_date.text.split(".")[0]),Integer.parseInt(start_date.text.split(".")[1]),Integer.parseInt(start_date.text.split(".")[2]))
-            picker.getDatePicker().setMinDate(minDate.getTime().getTime())
+            //날짜 제한 기준 : 시작 날짜
+            minDate2.set(Integer.parseInt(start_date.text.split(".")[0]),Integer.parseInt(start_date.text.split(".")[1])-1,Integer.parseInt(start_date.text.split(".")[2]))
+            picker.getDatePicker().setMinDate(minDate2.getTime().getTime())
             picker.show()
         }
 

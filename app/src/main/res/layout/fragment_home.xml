@@ -24,12 +24,12 @@
     <FrameLayout
         android:id="@+id/FrameLayout01"
         android:layout_width="wrap_content"
-        android:layout_height="320dp">
+        android:layout_height="290dp">
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
-            android:layout_height="280dp"
+            android:layout_height="260dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/home_img" />
 
@@ -52,28 +52,22 @@
             android:backgroundTint="#00ff"/>
 
 
-        <ImageView
-            android:id="@+id/imageView5"
+        <ImageButton
+            android:id="@+id/search_btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
+            android:layout_height="75dp"
+            android:scaleType="fitXY"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
             android:layout_gravity="center"
             android:layout_marginTop="140dp"
+            android:backgroundTint="#00ff"
             app:srcCompat="@drawable/home_searchimg" />
 
-        <androidx.appcompat.widget.SearchView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center"
-            android:id="@+id/search_view"
-            app:queryHint="찾아보기"
-            android:layout_marginTop="138dp"/>
+
     </FrameLayout>
 
     <FrameLayout
@@ -85,10 +79,10 @@
             android:id="@+id/imageView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
             android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/home_img2" />
 
@@ -96,9 +90,9 @@
             android:id="@+id/imageView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="4.5dp"
+            android:layout_marginBottom="20dp"
             android:layout_gravity="right"
             app:srcCompat="@drawable/home_img1" />
 
@@ -106,8 +100,8 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="42dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="41dp"
             android:textStyle="bold"
             android:textSize="16dp"
             android:text="해외 이동봉사 &#10;게임으로 체험해보기" />
@@ -116,8 +110,8 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="75dp"
-            android:layout_marginLeft="42dp"
+            android:layout_marginTop="83dp"
+            android:layout_marginLeft="41dp"
             android:textSize="10.5dp"
             android:text="Petch의 봉사 체험을 통해 해외 이동 봉사가&#10;어떻게 진행되는지 알아보세요!" />
 
@@ -128,8 +122,8 @@
             app:srcCompat="@drawable/home_game"
             android:scaleType="fitCenter"
             android:layout_gravity="bottom"
-            android:layout_marginLeft="22dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="25dp"
             android:backgroundTint="#00ff" />
     </FrameLayout>
 
@@ -138,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="20dp"
         android:textStyle="bold"
         android:layout_marginBottom="10dp"
         android:text="이동봉사를 기다리는 유기견" />
@@ -151,8 +145,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.845"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:scrollbars="none"
         android:scrollbarStyle="outsideInset"
         >
@@ -168,11 +162,11 @@
                 android:layout_width="150dp"
                 android:layout_height="170dp"
                 android:layout_marginRight="5dp"
-                android:padding="5sp"
-                android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
-                android:layout_weight="1"
                 android:background="@color/white"
+                android:padding="2dp"
+                android:src="@drawable/home_img2"
+                android:scaleType="center"
+                android:layout_weight="1"
                 />
 
             <ImageButton
@@ -181,7 +175,7 @@
                 android:layout_height="170dp"
                 android:padding="5sp"
                 android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
@@ -198,7 +192,7 @@
                 android:background="@color/white"
                 android:padding="6sp"
                 android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 />
 
             <ImageButton
@@ -209,7 +203,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:layout_weight="1"
                 android:background="@color/white"
                 />
@@ -222,7 +216,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:layout_weight="1"
                 android:background="@color/white"
 
@@ -231,18 +225,18 @@
 
     </HorizontalScrollView>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="10dp"
-        android:text="이동봉사 후기" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="이동봉사 후기"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
-    <HorizontalScrollView
+            <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:scrollbars="none"
@@ -251,8 +245,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.845"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="20dp"
         android:scrollbarStyle="outsideInset"
         >
@@ -270,7 +264,7 @@
                 android:layout_marginRight="5dp"
                 android:padding="5sp"
                 android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:layout_weight="1"
                 android:background="@color/white"
                 />
@@ -281,7 +275,7 @@
                 android:layout_height="170dp"
                 android:padding="5sp"
                 android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
@@ -298,7 +292,7 @@
                 android:background="@color/white"
                 android:padding="6sp"
                 android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 />
 
             <ImageButton
@@ -309,7 +303,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:layout_weight="1"
                 android:background="@color/white"
                 />
@@ -322,7 +316,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:src="@drawable/home_img2"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:layout_weight="1"
                 android:background="@color/white"
 

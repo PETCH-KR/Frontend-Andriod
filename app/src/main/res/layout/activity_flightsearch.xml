@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:gravity="left"
+        tools:ignore="MissingConstraints">
+
+    <ImageButton
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#00ff"
+        app:srcCompat="@drawable/fightsearh_canel"
+        />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:text="언제, 어디로 &#10;떠나시나요?"
+             />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:backgroundTint="#00ff"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/flighsearch_start"
+            />
+
+        <TextView
+            android:id="@+id/startText"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginRight="30dp"
+            android:singleLine="true"
+            android:text="출발지"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:scrollbars="horizontal"
+            android:backgroundTint="#00ff"
+            />
+
+        <ImageButton
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:backgroundTint="#00ff"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/flightsearch_end"
+            />
+
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginTop="101dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginRight="30dp"
+            android:singleLine="true"
+            android:text="도착지"
+           android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:scrollbars="horizontal"
+            android:backgroundTint="#00ff"
+            />
+
+        <ImageButton
+            android:id="@+id/swapBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00ff"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="65dp"
+            android:layout_gravity="right"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/flightsearch_swapbtn"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:backgroundTint="#00ff"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/flightsearch_calender"/>
+
+        <TextView
+            android:id="@+id/start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginRight="30dp"
+            android:singleLine="true"
+            android:text="2021.01.01"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:scrollbars="horizontal"
+            />
+
+        <TextView
+            android:id="@+id/end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="265dp"
+            android:layout_marginRight="30dp"
+            android:singleLine="true"
+            android:text="2021.01.01"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:scrollbars="horizontal"
+            />
+
+    </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="right"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="#00ff"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/flightsearch_searchbtn" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

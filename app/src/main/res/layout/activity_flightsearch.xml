@@ -133,6 +133,7 @@
             android:layout_marginTop="150dp"
             android:layout_marginRight="28dp"
             android:backgroundTint="#00ff"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_height="65dp"/>
 
         <Button
@@ -141,6 +142,7 @@
             android:layout_marginLeft="208dp"
             android:layout_marginTop="150dp"
             android:layout_marginRight="28dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:backgroundTint="#00ff"
             android:layout_height="65dp"/>
 
@@ -152,7 +154,7 @@
             android:layout_marginLeft="85dp"
             android:layout_marginRight="30dp"
             android:singleLine="true"
-            android:text="2021.01.01"
+            android:text=""
             android:textSize="18dp"
             android:gravity="center_vertical"
             android:scrollbars="horizontal"
@@ -166,7 +168,7 @@
             android:layout_marginLeft="265dp"
             android:layout_marginRight="30dp"
             android:singleLine="true"
-            android:text="2021.01.01"
+            android:text=""
             android:textSize="18dp"
             android:gravity="center_vertical"
             android:scrollbars="horizontal"
@@ -190,8 +192,10 @@
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/flightsearch_searchbtn" />
 
-
         </LinearLayout>
+
+
+
 
     </LinearLayout>
 

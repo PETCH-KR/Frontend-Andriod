@@ -5,4 +5,5 @@
         <item name="android:windowBackground">@drawable/petch_logo</item>
     </style>
 
+
 </resources>

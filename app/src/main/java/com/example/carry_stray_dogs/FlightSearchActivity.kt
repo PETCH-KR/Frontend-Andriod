@@ -1,14 +1,15 @@
 package com.example.carry_stray_dogs
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_flightsearch.*
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_home.search_btn
+import java.util.*
+
 
 class FlightSearchActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?){
@@ -44,6 +45,28 @@ class FlightSearchActivity : AppCompatActivity(){
             val intent = Intent(this,ChooseLocationActivity::class.java)
             intent.putExtra("flight","end")
             startActivity(intent)
+        }
+
+        start_btn.setOnClickListener{
+            var calendar = Calendar.getInstance()
+            var year = calendar.get(Calendar.YEAR)
+            var month = calendar.get(Calendar.MONTH)
+            var day = calendar.get(Calendar.DAY_OF_MONTH)
+
+            var listener = DatePickerDialog.OnDateSetListener{_,i,i2,i3 -> start_date.setText(""+i+"."+i2+"."+i3)}
+            var picker = DatePickerDialog(this,listener,year,month,day)
+            picker.show()
+        }
+
+        end_btn.setOnClickListener{
+            var calendar = Calendar.getInstance()
+            var year = calendar.get(Calendar.YEAR)
+            var month = calendar.get(Calendar.MONTH)
+            var day = calendar.get(Calendar.DAY_OF_MONTH)
+
+            var listener = DatePickerDialog.OnDateSetListener{_,i,i2,i3 -> end_date.setText(""+i+"."+i2+"."+i3)}
+            var picker = DatePickerDialog(this,listener,year,month,day)
+            picker.show()
         }
 
         cancelBtn.setOnClickListener{

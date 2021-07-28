@@ -1,13 +1,21 @@
 package com.example.carry_stray_dogs
 
+import android.Manifest
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
+import com.gun0912.tedpermission.PermissionListener
+import com.gun0912.tedpermission.TedPermission
 import kotlinx.android.synthetic.main.activity_flightsearch.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.time.LocalDateTime
@@ -19,6 +27,7 @@ class FlightSearchActivity : AppCompatActivity(){
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_flightsearch)
         //액션바 제거
         var actionBar : ActionBar? = supportActionBar
@@ -33,6 +42,10 @@ class FlightSearchActivity : AppCompatActivity(){
         end_date.text = formatted.split("-")[0]+"."+formatted.split("-")[1]+"."+formatted.split("-")[2]
         val minDate = Calendar.getInstance()
         val minDate2 = Calendar.getInstance()
+
+        var intent = getIntent()
+        startText.text = intent.getStringExtra("flight_start").toString()
+        endText.text = intent.getStringExtra("flight_end").toString()
 
         swapBtn.setOnClickListener {
            val start = startText.text.toString()
@@ -53,11 +66,15 @@ class FlightSearchActivity : AppCompatActivity(){
         start.setOnClickListener{
             val intent = Intent(this,ChooseLocationActivity::class.java)
             intent.putExtra("flight","start")
+            intent.putExtra("flight_start",startText.text.toString())
+            intent.putExtra("flight_end",endText.text.toString())
             startActivity(intent)
         }
         end.setOnClickListener{
             val intent = Intent(this,ChooseLocationActivity::class.java)
             intent.putExtra("flight","end")
+            intent.putExtra("flight_start",startText.text.toString())
+            intent.putExtra("flight_end",endText.text.toString())
             startActivity(intent)
         }
 
@@ -93,4 +110,5 @@ class FlightSearchActivity : AppCompatActivity(){
         }
 
     }
+
 }

@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="290dp"
+            android:layout_height="230dp"
             android:orientation="vertical"
             android:gravity="left"
             tools:ignore="MissingConstraints">
@@ -40,34 +40,20 @@
                 android:text="어디서 출발하시나요?"
                 />
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="28dp"
-                android:layout_marginRight="28dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#00ff"
-                    android:scaleType="centerInside"
-                    app:srcCompat="@drawable/choose_blank"/>
-
-                <SearchView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:queryHint="국가, 도시 또는 공항"
-                    android:queryBackground="@null"></SearchView>
-
-            </FrameLayout>
 
         </LinearLayout>
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ff">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="100dp"
             android:layout_gravity="left">
 
             <TextView
@@ -78,20 +64,9 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:singleLine="true"
-                android:text="현재 위치"
+                android:text="대한민국 (KR)"
                 android:textSize="15dp"
                 android:backgroundTint="#00ff"
-                />
-
-            <ImageButton
-                android:id="@+id/currentlocation_btn"
-                android:layout_width="180dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:backgroundTint="#00ff"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/choose_currentlocation"
                 />
 
             <ImageView
@@ -101,33 +76,295 @@
                 android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/choose_line" />
 
+            <Button
+                android:id="@+id/GMP"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:text="김포공항 (GMP)"
+                android:onClick="onClick"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+
+            <Button
+                android:id="@+id/INC"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:text="인천공항 (INC)"
+                android:onClick="onClick"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+
+            <Button
+                android:id="@+id/CJU"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="제주공항 (CJU)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+
             <TextView
                 android:id="@+id/text4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:singleLine="true"
-                android:text="현재 위치"
+                android:onClick="onClick"
+                android:text="미국 (US)"
                 android:textSize="15dp"
                 android:backgroundTint="#00ff"
                 />
 
-            <LinearLayout
-                android:id="@+id/current_layout"
+            <ImageView
+                android:id="@+id/line2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/choose_line" />
+
+            <Button
+                android:id="@+id/LAX"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:scrollbars="vertical"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="로스앤젤레스인터네셔널,CA (LAX)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/SFO"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="샌프란시스코인터네셔널 (SFO)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/JFK"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="뉴욕존에프케네디 (JFK)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+
+            <Button
+                android:id="@+id/EWR"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="뉴욕뉴왁 (EWR)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/LGA"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="뉴욕라과디아 (LGA)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/SWF"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="스튜어트 국제 (SWF)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/HNL"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="호놀룰루, 하와이 (HNL)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/BOS"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="보스턴로간인터네셔널 (BOS)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
                 android:layout_marginLeft="30dp"
-                android:orientation="vertical"
-                android:layout_marginRight="30dp"/>
+                android:layout_marginRight="30dp"
+                android:singleLine="true"
+                android:text="캐나다 (CA)"
+                android:textSize="15dp"
+                android:backgroundTint="#00ff"
+                />
+
+            <ImageView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/choose_line" />
 
 
+            <Button
+                android:id="@+id/YYZ"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:onClick="onClick"
+                android:text="토론토피어슨인터내셔널 (YYZ)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
 
+            <Button
+                android:id="@+id/YKF"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onClick"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:text="키치너/워털루 (YKF)"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/YHM"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:text="해밀튼 (YHM)"
+                android:onClick="onClick"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/YVR"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:text="밴쿠버인터내셔널 (YVR)"
+                android:onClick="onClick"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/YXX"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:text="아보츠포드 (YXX)"
+                android:onClick="onClick"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
+            <Button
+                android:id="@+id/CXH"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00ff"
+                android:text="밴쿠버코울하버 (CXH)"
+                android:onClick="onClick"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:scaleType="centerInside"
+                />
         </LinearLayout>
 
+        </ScrollView>
 
     </LinearLayout>
 

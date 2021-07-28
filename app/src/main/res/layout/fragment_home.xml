@@ -24,12 +24,12 @@
     <FrameLayout
         android:id="@+id/FrameLayout01"
         android:layout_width="wrap_content"
-        android:layout_height="290dp">
+        android:layout_height="270dp">
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
-            android:layout_height="260dp"
+            android:layout_height="240dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/home_img" />
 
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="65dp"
             app:srcCompat="@drawable/home_logo" />
 
         <ImageButton
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/home_ring"
             android:layout_gravity="right|center"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="65dp"
             android:layout_marginRight="15dp"
             android:backgroundTint="#00ff"/>
 
@@ -59,14 +59,13 @@
             android:scaleType="fitXY"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="40dp"
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:layout_gravity="center"
             android:layout_marginTop="140dp"
             android:backgroundTint="#00ff"
             app:srcCompat="@drawable/home_searchimg" />
-
 
     </FrameLayout>
 
@@ -80,9 +79,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="30dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/home_img2" />
 
@@ -92,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_marginRight="4.5dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="30dp"
             android:layout_gravity="right"
             app:srcCompat="@drawable/home_img1" />
 
@@ -100,7 +99,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="41dp"
             android:textStyle="bold"
             android:textSize="16dp"
@@ -110,7 +109,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="83dp"
+            android:layout_marginTop="73dp"
             android:layout_marginLeft="41dp"
             android:textSize="10.5dp"
             android:text="Petch의 봉사 체험을 통해 해외 이동 봉사가&#10;어떻게 진행되는지 알아보세요!" />
@@ -123,7 +122,7 @@
             android:scaleType="fitCenter"
             android:layout_gravity="bottom"
             android:layout_marginLeft="30dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="35dp"
             android:backgroundTint="#00ff" />
     </FrameLayout>
 
@@ -139,7 +138,7 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -153,14 +152,14 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
 
             <ImageButton
                 android:id="@+id/imgBtn1"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:layout_marginRight="5dp"
                 android:background="@color/white"
                 android:padding="2dp"
@@ -171,8 +170,8 @@
 
             <ImageButton
                 android:id="@+id/imgBtn2"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:padding="5sp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
@@ -184,8 +183,8 @@
 
             <ImageButton
                 android:id="@+id/imgBtn3"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -197,8 +196,8 @@
 
             <ImageButton
                 android:id="@+id/imgBtn4"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:padding="5sp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
@@ -210,8 +209,8 @@
 
             <ImageButton
                 android:id="@+id/imgBtn5"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:padding="5sp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
@@ -238,7 +237,7 @@
 
             <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="wrap_content"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -253,14 +252,14 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
 
             <ImageButton
                 android:id="@+id/imgBtn6"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:layout_marginRight="5dp"
                 android:padding="5sp"
                 android:src="@drawable/home_img2"
@@ -271,8 +270,8 @@
 
             <ImageButton
                 android:id="@+id/imgBtn7"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:padding="5sp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
@@ -284,8 +283,8 @@
 
             <ImageButton
                 android:id="@+id/imgBtn8"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -297,8 +296,8 @@
 
             <ImageButton
                 android:id="@+id/imgBtn9"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:padding="5sp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
@@ -310,8 +309,8 @@
 
             <ImageButton
                 android:id="@+id/imgBtn10"
-                android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:padding="5sp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"

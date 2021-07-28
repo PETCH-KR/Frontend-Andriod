@@ -109,6 +109,25 @@ class FlightSearchActivity : AppCompatActivity(){
             startActivity(intent)
         }
 
+        searchBtn.setOnClickListener{
+            val start = startText.text.toString()
+            val end = endText.text.toString()
+            if(start == "출발지"){
+                Toast.makeText(applicationContext, "출발지를 설정해주세요.", Toast.LENGTH_SHORT).show()
+            }
+            else if(end == "도착지"){
+                Toast.makeText(applicationContext, "도착지를 설정해주세요.", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val intent = Intent(this,SearchResultActivity::class.java)
+                intent.putExtra("flight_start",startText.text.toString())
+                intent.putExtra("flight_end",endText.text.toString())
+                intent.putExtra("flight_start_time",start_date.text.toString())
+                intent.putExtra("flight_end_time",end_date.text.toString())
+                startActivity(intent)
+            }
+        }
+
     }
 
 }

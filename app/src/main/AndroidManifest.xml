@@ -25,6 +25,7 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".FlightSearchActivity"></activity>
         <activity android:name=".ChooseLocationActivity"></activity>
+        <activity android:name=".SearchResultActivity"></activity>
     </application>
 
 </manifest>

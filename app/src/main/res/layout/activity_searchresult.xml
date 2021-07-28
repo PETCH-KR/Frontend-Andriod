@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:background="#f5f5f5"
+            >
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:backgroundTint="#00ff"
+                app:srcCompat="@drawable/choose_back"
+                />
+
+            <ImageButton
+                android:id="@+id/iconbtn"
+                android:layout_width="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="40dp"
+                android:backgroundTint="#00ff"
+                android:layout_marginTop="50dp"
+                app:srcCompat="@drawable/home_logo" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/searchresult_blank"
+                android:layout_marginTop="110dp"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/startText"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="117dp"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="35dp"
+                android:gravity="center_vertical"
+                android:text="출발지"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/endText"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="117dp"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="240dp"
+                android:gravity="center_vertical"
+                android:text="도착지"
+                ></TextView>
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/searchresult_blank"
+                android:layout_marginTop="170dp"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="177dp"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="40dp"
+                android:gravity="center_vertical"
+                android:text="기한1"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/endDate"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="177dp"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="230dp"
+                android:gravity="center_vertical"
+                android:text="기한2"
+                ></TextView>
+
+            <ImageButton
+                android:id="@+id/swapBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00ff"
+                android:layout_marginTop="110dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/searchresult_swap"
+                />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="이동봉사를 기다리는 유기견" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.845"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:scrollbars="none"
+                android:scrollbarStyle="outsideInset">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <Button
+                        android:id="@+id/imgBtn1"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:text="#태그필터"
+                        android:textSize="12dp"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+
+                    <Button
+                        android:id="@+id/imgBtn2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:textSize="12dp"
+                        android:text="#태그필터"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+
+                    <Button
+                        android:id="@+id/imgBtn3"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:textSize="12dp"
+                        android:text="#태그필터"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+
+                    <Button
+                        android:id="@+id/imgBtn4"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:textSize="12dp"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:text="#태그필터"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+
+                    <Button
+                        android:id="@+id/imgBtn5"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:textSize="12dp"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:text="#태그필터"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+                    <Button
+                        android:id="@+id/imgBtn6"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:textSize="12dp"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:text="#태그필터"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+                    <Button
+                        android:id="@+id/imgBtn7"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:textSize="12dp"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:text="#태그필터"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+                    <Button
+                        android:id="@+id/imgBtn8"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:textSize="12dp"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:text="#태그필터"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+                    <Button
+                        android:id="@+id/imgBtn9"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:textSize="12dp"
+                        android:text="#태그필터"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+                    <Button
+                        android:id="@+id/imgBtn10"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        app:backgroundTint = "@null"
+                        android:textSize="12dp"
+                        android:background="@drawable/searchresult_btn_custom"
+                        android:padding="2dp"
+                        android:text="#태그필터"
+                        android:stateListAnimator="@null"
+                        android:textColor="@color/black"
+                        android:scaleType="center"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!--
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.845"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:scrollbars="none"
+                android:scrollbarStyle="outsideInset">
+
+            <LinearLayout
+                android:id="@+id/tagView"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                >
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            -->
+
+            <ScrollView
+                android:id="@+id/InfoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:scrollbarSize="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.523"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.562">
+
+                <LinearLayout
+                    android:id="@+id/Info"
+                    android:layout_width="380dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

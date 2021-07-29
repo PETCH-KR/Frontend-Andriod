@@ -156,70 +156,71 @@
             android:orientation="horizontal"
             >
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn1"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="5dp"
-                android:background="@color/white"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
                 android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
                 android:layout_weight="1"
                 />
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn2"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:padding="5sp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
+                android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:background="@color/white"
                 />
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn3"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:padding="6sp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
+                android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
+                android:layout_weight="1"
                 />
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn4"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:padding="5sp"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
+                android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
                 android:layout_weight="1"
-                android:background="@color/white"
                 />
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn5"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:padding="5sp"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
+                android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
                 android:layout_weight="1"
-                android:background="@color/white"
-
                 />
+
         </LinearLayout>
 
     </HorizontalScrollView>
@@ -256,70 +257,71 @@
             android:orientation="horizontal"
             >
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn6"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="5dp"
-                android:padding="5sp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
+                android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
                 android:layout_weight="1"
-                android:background="@color/white"
                 />
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn7"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:padding="5sp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
+                android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:background="@color/white"
                 />
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn8"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:padding="6sp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
+                android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
+                android:layout_weight="1"
                 />
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn9"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:padding="5sp"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
+                android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
                 android:layout_weight="1"
-                android:background="@color/white"
                 />
 
-            <ImageButton
+            <Button
                 android:id="@+id/imgBtn10"
                 android:layout_width="140dp"
                 android:layout_height="160dp"
-                android:padding="5sp"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint = "@null"
+                android:background="@drawable/searchresult_btn_custom"
+                android:padding="2dp"
                 android:src="@drawable/home_img2"
                 android:scaleType="center"
                 android:layout_weight="1"
-                android:background="@color/white"
-
                 />
+
         </LinearLayout>
 
     </HorizontalScrollView>

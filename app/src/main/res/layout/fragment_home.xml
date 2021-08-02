@@ -75,14 +75,16 @@
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="26dp"
+            android:layout_marginLeft="27dp"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="26dp"
+            android:layout_marginRight="27dp"
             android:layout_marginBottom="10dp"
+            android:padding="0dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/home_img2" />
 
         <ImageButton
+            android:id="@+id/game"
             android:layout_width="130dp"
             android:layout_height="60dp"
             android:scaleType="fitCenter"
@@ -114,7 +116,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.845"
         android:layout_marginLeft="27dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="0dp"
         android:scrollbars="none"
         android:scrollbarStyle="outsideInset"
         >
@@ -213,7 +215,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.845"
         android:layout_marginLeft="27dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="0dp"
         android:layout_marginBottom="20dp"
 
         android:scrollbarStyle="outsideInset"

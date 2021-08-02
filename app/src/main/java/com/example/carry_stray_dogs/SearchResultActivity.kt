@@ -115,31 +115,6 @@ class SearchResultActivity : AppCompatActivity() {
 
             buttonview.addView(group)
         }
-
-        /*
-        for(i: Int in 1..10) {
-            dynamicButton = Button(this)
-            circleView = ImageView(this)
-
-            val layoutParams = FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.MATCH_PARENT,
-                changeDP(130)
-            )  //width height
-
-            //circle crop
-            Glide.with(this).load(R.drawable.dog).circleCrop().into(circleView!!)
-
-            dynamicButton!!.layoutParams = layoutParams
-
-
-            //button custom
-            dynamicButton!!.background = ContextCompat.getDrawable(this, R.drawable.searchresult_btn_custom)
-            layoutParams.setMargins(changeDP(10), changeDP(8), changeDP(10), changeDP(8)) //left top right bottom
-            layoutParams.gravity = Gravity.LEFT or Gravity.CENTER_HORIZONTAL
-            buttonview.addView(dynamicButton)
-
-        }
-      */
     }
 
 

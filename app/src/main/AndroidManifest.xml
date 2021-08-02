@@ -26,6 +26,10 @@
         <activity android:name=".FlightSearchActivity"></activity>
         <activity android:name=".ChooseLocationActivity"></activity>
         <activity android:name=".SearchResultActivity"></activity>
+        <activity android:name=".Game1Activity"></activity>
+        <activity android:name=".Game2Activity"></activity>
+        <activity android:name=".Game3Activity"></activity>
+
     </application>
 
 </manifest>

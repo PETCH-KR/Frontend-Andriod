@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/game1_text" />
+
+        <ImageButton
+            android:id="@+id/nextBtn"
+            android:layout_width="50dp"
+            android:layout_marginLeft="183dp"
+            android:layout_height="38dp"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/game1_nextbtn" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="137dp"
+            app:srcCompat="@drawable/game1_q2" />
+
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginLeft="67dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="67dp"
+            app:srcCompat="@drawable/game1_q" />
+
+        <ImageButton
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="60dp"
+            android:backgroundTint="@color/white"
+            android:padding="0dp"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/game1_true" />
+
+        <ImageButton
+            android:id="@+id/wrong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="60dp"
+            android:padding="0dp"
+            android:clickable="true"
+            android:layout_marginRight="60dp"
+            android:backgroundTint="@color/white"
+            app:srcCompat="@drawable/game1_false" />
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

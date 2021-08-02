@@ -25,19 +25,18 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         //액션바 제거
-        var actionBar : ActionBar?
-        actionBar = supportActionBar
+        var actionBar : ActionBar? = supportActionBar
         actionBar?.hide()
 
         var skipBtn = findViewById<ImageButton>(R.id.skipBtn)
-        skipBtn.setOnClickListener(){
+        skipBtn.setOnClickListener{
             val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
         }
 
         var pageradapter = MyPagerAdapter(this)
         var pager = findViewById<ViewPager>(R.id.view_pager)
-        pager.setAdapter(pageradapter)
+        pager.adapter = pageradapter
 
         var tabLayout = findViewById<TabLayout>(R.id.tablayout)
         tabLayout.setupWithViewPager(pager,true)

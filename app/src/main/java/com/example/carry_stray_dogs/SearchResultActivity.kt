@@ -1,17 +1,19 @@
 package com.example.carry_stray_dogs
 
-import android.R.attr.left
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import android.util.TypedValue
 import android.view.Gravity
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.marginLeft
+import androidx.core.view.marginTop
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.activity_flightsearch.*
 import kotlinx.android.synthetic.main.activity_flightsearch.endText
 import kotlinx.android.synthetic.main.activity_flightsearch.startText
 import kotlinx.android.synthetic.main.activity_searchresult.*
@@ -19,7 +21,9 @@ import kotlinx.android.synthetic.main.activity_searchresult.*
 
 class SearchResultActivity : AppCompatActivity() {
 
-    var dynamicButton : ImageButton? =null
+    var dynamicInfo : TextView? =null
+    var group : LinearLayout? =null
+    var group2 : RelativeLayout? =null
     var circleView : ImageView? =null
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -74,40 +78,47 @@ class SearchResultActivity : AppCompatActivity() {
 
         //Adapt Dog Info
         val buttonview = findViewById<LinearLayout>(R.id.Info)
+        buttonview.isClickable=true
+
+        for(i: Int in 1..10) {
+
+            //circle crop
+            circleView = ImageView(this)
+            Glide.with(this).load(R.drawable.dog).circleCrop().into(circleView!!)
+            circleView!!.layoutParams = LinearLayout.LayoutParams(changeDP(130), changeDP(80))
+
+            //group : circle crop image + info text
+            dynamicInfo = TextView(this)
+            dynamicInfo!!.textSize = 13f
+            dynamicInfo!!.text = " 품종 : 믹스견 \n 보호기관 : 00보호기관 \n 출국 가능 마감일 : 2021-01-01 \n 등록일 : 2021-01-01"
+            dynamicInfo!!.gravity = Gravity.CENTER_VERTICAL
+            dynamicInfo!!.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, changeDP(80))
+
+            group = LinearLayout(this)
+            group!!.isClickable=true
+            //group!!.isDuplicateParentStateEnabled=true
+            group!!.orientation = LinearLayout.HORIZONTAL
+            val group_params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, changeDP(110))
+            group_params.setMargins(changeDP(5), changeDP(0), changeDP(5), changeDP(14))
+            group!!.layoutParams = group_params
+            group!!.setBackgroundResource(R.drawable.searchresult_btn_custom)
+            group!!.gravity = Gravity.CENTER
+            circleView!!.isClickable = false
+            dynamicInfo!!.isClickable = false
+            group!!.addView(circleView)
+            group!!.addView(dynamicInfo)
+
+            group!!.setOnClickListener {
+                Log.i("click layout","$i 번째 layout")
+                //button event
+            }
+
+            buttonview.addView(group)
+        }
+
         /*
         for(i: Int in 1..10) {
             dynamicButton = Button(this)
-            circleView = ImageView(this)
-            val layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                changeDP(130)
-            )  //width height
-
-            //circle crop
-            Glide.with(this).load(R.drawable.dog).circleCrop().into(circleView!!)
-
-            dynamicButton!!.layoutParams = layoutParams
-
-            //button custom
-            dynamicButton!!.background = ContextCompat.getDrawable(this, R.drawable.searchresult_btn_custom)
-            dynamicButton!!.text = "PETCH !!!!!"
-
-            dynamicButton!!.setCompoundDrawablesWithIntrinsicBounds(circleView!!.drawable, null, null, null)
-
-            if(circleView!!.drawable==null){
-                Log.i("null? ","yes")
-            }
-            else{
-                Log.i("null? ","no")
-                Log.i("null? ",circleView!!.drawable.toString())
-            }
-
-            layoutParams.setMargins(changeDP(0), changeDP(10), changeDP(0), changeDP(0)) //left top right bottom
-            buttonview.addView(dynamicButton)
-        }
-       */
-        for(i: Int in 1..10) {
-            dynamicButton = ImageButton(this)
             circleView = ImageView(this)
 
             val layoutParams = FrameLayout.LayoutParams(
@@ -116,17 +127,21 @@ class SearchResultActivity : AppCompatActivity() {
             )  //width height
 
             //circle crop
-            Glide.with(this).load(R.drawable.dog).circleCrop().into(dynamicButton!!)
+            Glide.with(this).load(R.drawable.dog).circleCrop().into(circleView!!)
 
             dynamicButton!!.layoutParams = layoutParams
 
+
             //button custom
             dynamicButton!!.background = ContextCompat.getDrawable(this, R.drawable.searchresult_btn_custom)
-            layoutParams.setMargins(changeDP(20), changeDP(10), changeDP(0), changeDP(20)) //left top right bottom
+            layoutParams.setMargins(changeDP(10), changeDP(8), changeDP(10), changeDP(8)) //left top right bottom
             layoutParams.gravity = Gravity.LEFT or Gravity.CENTER_HORIZONTAL
             buttonview.addView(dynamicButton)
+
         }
+      */
     }
+
 
     private fun changeDP(value : Int) : Int{
         var displayMetrics = resources.displayMetrics

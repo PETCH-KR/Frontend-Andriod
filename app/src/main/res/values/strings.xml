@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">carry-stray-dogs</string>
+    <string name="kakao_app_key">62170343af36c67ff181e991cca569f0</string>
 </resources>
+

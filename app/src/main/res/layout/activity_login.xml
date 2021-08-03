@@ -146,20 +146,20 @@
                 <ImageButton
                     android:id="@+id/google_login"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00ff"
                     android:scaleType="fitCenter"
                     android:src="@drawable/login_google" />
 
                 <ImageButton
-                    android:id="@+id/facebook_login"
+                    android:id="@+id/kakao_login"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00ff"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/login_facebook" />
+                    android:src="@drawable/login_kakao" />
 
             </LinearLayout>
 

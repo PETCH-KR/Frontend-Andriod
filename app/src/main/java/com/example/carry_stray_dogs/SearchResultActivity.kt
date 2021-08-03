@@ -1,6 +1,7 @@
 package com.example.carry_stray_dogs
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -55,6 +56,119 @@ class SearchResultActivity : AppCompatActivity() {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
+
+        var tagBtn1 : Button = findViewById(R.id.tagBtn1)
+        var tagBtn2 : Button = findViewById(R.id.tagBtn2)
+        var tagBtn3 : Button = findViewById(R.id.tagBtn3)
+        var tagBtn4 : Button = findViewById(R.id.tagBtn4)
+        var tagBtn5 : Button = findViewById(R.id.tagBtn5)
+        var tagBtn6 : Button = findViewById(R.id.tagBtn6)
+        var tagBtn7 : Button = findViewById(R.id.tagBtn7)
+        var tagBtn8 : Button = findViewById(R.id.tagBtn8)
+        var tagBtn9 : Button = findViewById(R.id.tagBtn9)
+        var tagBtn10 : Button = findViewById(R.id.tagBtn10)
+
+        tagBtn1.setOnClickListener{
+            if(tagBtn1.textColors.equals(Color.WHITE)){
+                tagBtn1.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn1.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn1.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn1.setTextColor(Color.WHITE)
+            }
+        }
+        tagBtn2.setOnClickListener{
+            if(tagBtn2.textColors.equals(Color.WHITE)){
+                tagBtn2.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn2.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn2.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn2.setTextColor(Color.WHITE)
+            }
+        }
+        tagBtn3.setOnClickListener{
+            if(tagBtn3.textColors.equals(Color.WHITE)){
+                tagBtn3.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn3.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn3.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn3.setTextColor(Color.WHITE)
+            }
+        }
+        tagBtn4.setOnClickListener{
+            if(tagBtn4.textColors.equals(Color.WHITE)){
+                tagBtn4.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn4.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn4.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn4.setTextColor(Color.WHITE)
+            }
+        }
+        tagBtn5.setOnClickListener{
+            if(tagBtn5.textColors.equals(Color.WHITE)){
+                tagBtn5.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn5.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn5.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn5.setTextColor(Color.WHITE)
+            }
+        }
+        tagBtn6.setOnClickListener{
+            if(tagBtn6.textColors.equals(Color.WHITE)){
+                tagBtn6.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn6.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn6.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn6.setTextColor(Color.WHITE)
+            }
+        }
+        tagBtn7.setOnClickListener{
+            if(tagBtn7.textColors.equals(Color.WHITE)){
+                tagBtn7.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn7.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn7.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn7.setTextColor(Color.WHITE)
+            }
+        }
+        tagBtn8.setOnClickListener{
+            if(tagBtn8.textColors.equals(Color.WHITE)){
+                tagBtn8.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn8.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn8.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn8.setTextColor(Color.WHITE)
+            }
+        }
+        tagBtn9.setOnClickListener{
+            if(tagBtn9.textColors.equals(Color.WHITE)){
+                tagBtn9.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn9.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn9.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn9.setTextColor(Color.WHITE)
+            }
+        }
+        tagBtn10.setOnClickListener{
+            if(tagBtn10.textColors.equals(Color.WHITE)){
+                tagBtn10.setBackgroundResource(R.drawable.searchresult_btn_custom)
+                tagBtn10.setTextColor(Color.BLACK)
+            }
+            else{
+                tagBtn10.setBackgroundResource(R.drawable.searchresult_btn_custom_tag)
+                tagBtn10.setTextColor(Color.WHITE)
+            }
+        }
+
 
         /*
         //Tag

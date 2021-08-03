@@ -152,7 +152,7 @@
                     >
 
                     <Button
-                        android:id="@+id/imgBtn1"
+                        android:id="@+id/tagBtn1"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -168,7 +168,7 @@
                         />
 
                     <Button
-                        android:id="@+id/imgBtn2"
+                        android:id="@+id/tagBtn2"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -184,7 +184,7 @@
                         />
 
                     <Button
-                        android:id="@+id/imgBtn3"
+                        android:id="@+id/tagBtn3"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -200,7 +200,7 @@
                         />
 
                     <Button
-                        android:id="@+id/imgBtn4"
+                        android:id="@+id/tagBtn4"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -216,7 +216,7 @@
                         />
 
                     <Button
-                        android:id="@+id/imgBtn5"
+                        android:id="@+id/tagBtn5"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -231,7 +231,7 @@
                         android:layout_weight="1"
                         />
                     <Button
-                        android:id="@+id/imgBtn6"
+                        android:id="@+id/tagBtn6"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -246,7 +246,7 @@
                         android:layout_weight="1"
                         />
                     <Button
-                        android:id="@+id/imgBtn7"
+                        android:id="@+id/tagBtn7"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -261,7 +261,7 @@
                         android:layout_weight="1"
                         />
                     <Button
-                        android:id="@+id/imgBtn8"
+                        android:id="@+id/tagBtn8"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -276,7 +276,7 @@
                         android:layout_weight="1"
                         />
                     <Button
-                        android:id="@+id/imgBtn9"
+                        android:id="@+id/tagBtn9"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -291,7 +291,7 @@
                         android:layout_weight="1"
                         />
                     <Button
-                        android:id="@+id/imgBtn10"
+                        android:id="@+id/tagBtn10"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -309,34 +309,6 @@
                 </LinearLayout>
 
             </HorizontalScrollView>
-
-            <!--
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.845"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:scrollbars="none"
-                android:scrollbarStyle="outsideInset">
-
-            <LinearLayout
-                android:id="@+id/tagView"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="10"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                >
-
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            -->
 
             <ScrollView
                 android:id="@+id/InfoView"
@@ -365,7 +337,6 @@
                 </LinearLayout>
 
             </ScrollView>
-
         </LinearLayout>
 
     </LinearLayout>

@@ -59,7 +59,7 @@ class Game1Activity : AppCompatActivity(){
 
             CoroutineScope(Main).launch {
                 dialog!!.show()
-                delay(2000)
+                delay(3000)
                 dialog!!.dismiss()
                 changeView()
             }
@@ -68,7 +68,7 @@ class Game1Activity : AppCompatActivity(){
 
     }
     fun changeView(){
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, Game2Activity::class.java)
         startActivity(intent)
         finish()
     }

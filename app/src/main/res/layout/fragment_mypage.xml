@@ -256,13 +256,13 @@
 
             </com.google.android.material.tabs.TabLayout>
 
-            <androidx.viewpager.widget.ViewPager
+            <com.example.carry_stray_dogs.DynamicViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="30dp"/>
+                android:layout_marginBottom="10dp"/>
 
         </LinearLayout>
     </LinearLayout>

@@ -41,13 +41,13 @@ class Game1Activity : AppCompatActivity(){
         }
         wrongBtn.setOnClickListener(){
             answerBtn.setImageResource(R.drawable.game1_true)
-            //wrongBtn.setImageResource(R.drawable.game1_wrongcheck)
+            wrongBtn.setImageResource(R.drawable.game1_answerfalse)
             Log.i("wrongBtn: ","click")
         }
         nextBtn.setOnClickListener(){
             answerBtn.setImageResource(R.drawable.game1_answercheck)
             wrongBtn.setImageResource(R.drawable.game1_false)
-            question.setVisibility(View.INVISIBLE)
+            question.visibility = View.INVISIBLE
 
             Log.i("nextBtn: ","click")
 

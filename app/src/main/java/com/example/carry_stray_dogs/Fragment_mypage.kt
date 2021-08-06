@@ -1,19 +1,24 @@
 package com.example.carry_stray_dogs
 
+import android.app.Activity
 import android.os.Bundle
+import android.text.TextUtils.replace
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 
 
-class Fragment_mypage : Fragment() {
+class Fragment_mypage : Fragment(){
 
     var viewPager: ViewPager? = null
+    var userImage : ImageButton ?= null
     private var fragment1: mypage_MyReview_Fragament? = null
     private var fragment2: mypage_CompanyReview_Fragament? = null
 
@@ -32,9 +37,10 @@ class Fragment_mypage : Fragment() {
         val tab = view.findViewById<TabLayout>(R.id.tabLayout)
         tab.setupWithViewPager(viewPager)
 
+        userImage = view.findViewById(R.id.userImageBtn)
+
         return view
     }
-
 
     class FragmentAdapter (fm : FragmentManager): FragmentPagerAdapter(fm) {
         //position 에 따라 원하는 Fragment로 이동시키기
@@ -60,6 +66,14 @@ class Fragment_mypage : Fragment() {
             }
             return title     }
 
+    }
+
+    fun newInstant() : mypage_CompanyReview_Fragament
+    {
+        val args = Bundle()
+        val frag = mypage_CompanyReview_Fragament()
+        frag.arguments = args
+        return frag
     }
 
 }

@@ -13,4 +13,12 @@ class Fragment_chat : Fragment(){
     ): View? {
         return inflater.inflate(R.layout.fragment_chat, container, false)
     }
+
+    fun newInstant() : mypage_CompanyReview_Fragament
+    {
+        val args = Bundle()
+        val frag = mypage_CompanyReview_Fragament()
+        frag.arguments = args
+        return frag
+    }
 }

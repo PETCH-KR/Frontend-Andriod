@@ -3,6 +3,7 @@ package com.example.carry_stray_dogs
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageButton
@@ -10,10 +11,11 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity()  {
 
     private val fragmentHome by lazy{Fragment_home()}
     private val fragmentlist by lazy{Fragment_list()}
@@ -31,6 +33,8 @@ class MainActivity : AppCompatActivity() {
 
         initNavigationBar()
     }
+
+
 
     private fun initNavigationBar(){
         bottom_navigation.run{
@@ -61,4 +65,7 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.container,fragment)
             .commit()
     }
+
+
 }
+

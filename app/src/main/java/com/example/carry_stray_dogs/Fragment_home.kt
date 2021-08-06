@@ -70,6 +70,13 @@ class Fragment_home : Fragment() {
         }
 
     }
+    fun newInstant() : mypage_CompanyReview_Fragament
+    {
+        val args = Bundle()
+        val frag = mypage_CompanyReview_Fragament()
+        frag.arguments = args
+        return frag
+    }
 
 
 }

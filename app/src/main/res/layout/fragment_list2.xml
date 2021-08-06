@@ -8,6 +8,184 @@
     android:background="@android:color/white"
     tools:context=".Fragment_list_2">
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="#00ff"
+            app:srcCompat="@drawable/choose_back"
+            />
+
+        <ImageButton
+            android:id="@+id/iconbtn"
+            android:layout_width="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="40dp"
+            android:backgroundTint="#00ff"
+            android:layout_marginTop="50dp"
+            app:srcCompat="@drawable/home_logo" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/list2_infobox" />
+
+        <LinearLayout
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/dog_Pic"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                app:srcCompat="@drawable/dog" />
+
+            <TextView
+                android:id="@+id/dog_Info"
+                android:layout_margin="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:text="해외 이동봉사 날짜" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/searchresult_blank"
+            android:layout_marginTop="60dp"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/startText"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="67dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="35dp"
+            android:gravity="center_vertical"
+            android:text="출발지"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="67dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="240dp"
+            android:gravity="center_vertical"
+            android:text="도착지"
+            ></TextView>
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/searchresult_blank"
+            android:layout_marginTop="120dp"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/startDate"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="127dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="40dp"
+            android:gravity="center_vertical"
+            android:text="기한1"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/endDate"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="127dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="230dp"
+            android:gravity="center_vertical"
+            android:text="기한2"
+            ></TextView>
+
+        <ImageButton
+            android:id="@+id/swapBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#00ff"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/searchresult_swap"
+            />
+
+    </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,8 +195,8 @@
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
-            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
             android:textStyle="bold"
             android:layout_marginLeft="20dp"
             android:text="현재 진행중인 봉사상황" />
@@ -28,7 +206,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         >
 
         <ImageView
@@ -81,17 +259,137 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/imageView20"
             android:layout_width="match_parent"
             android:layout_height="270dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:backgroundTint="@color/white"
             android:scaleType="centerInside"
             android:src="@drawable/list_guide1" />
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                app:srcCompat="@drawable/list2_box2" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:text="서류 모아보기" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="0dp"
+            android:scrollbars="none"
+            android:scrollbarStyle="outsideInset"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageButton
+                    android:id="@+id/imgBtn1"
+                    android:layout_width="130dp"
+                    android:layout_height="145dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/searchresult_btn_custom"
+                    android:padding="2dp"
+                    app:backgroundTint = "@null"
+                    android:src="@drawable/list2_document"
+                    android:scaleType="center"
+                    android:layout_weight="1"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imgBtn2"
+                    android:layout_width="130dp"
+                    android:layout_height="145dp"
+                    android:layout_marginRight="10dp"
+                    app:backgroundTint = "@null"
+                    android:background="@drawable/searchresult_btn_custom"
+                    android:padding="2dp"
+                    android:src="@drawable/list2_document"
+                    android:scaleType="center"
+                    android:layout_weight="1"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imgBtn3"
+                    android:layout_width="130dp"
+                    android:layout_height="145dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/searchresult_btn_custom"
+                    android:padding="2dp"
+                    android:scaleType="center"
+                    android:src="@drawable/list2_document"
+                    app:backgroundTint="@null" />
+
+                <ImageButton
+                    android:id="@+id/imgBtn4"
+                    android:layout_width="130dp"
+                    android:layout_height="145dp"
+                    android:layout_marginRight="10dp"
+                    app:backgroundTint = "@null"
+                    android:background="@drawable/searchresult_btn_custom"
+                    android:padding="2dp"
+                    android:src="@drawable/list2_document"
+                    android:scaleType="center"
+                    android:layout_weight="1"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imgBtn5"
+                    android:layout_width="130dp"
+                    android:layout_height="145dp"
+                    android:layout_marginRight="10dp"
+                    app:backgroundTint = "@null"
+                    android:background="@drawable/searchresult_btn_custom"
+                    android:padding="2dp"
+                    android:src="@drawable/list2_document"
+                    android:scaleType="center"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
     </LinearLayout>
 
+
+
+        </LinearLayout>
+</ScrollView>
 
 </LinearLayout>

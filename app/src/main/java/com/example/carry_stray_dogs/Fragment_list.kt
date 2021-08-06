@@ -42,7 +42,7 @@ class Fragment_list : Fragment(){
         val buttonview = view.findViewById<LinearLayout>(R.id.Info)
         buttonview.isClickable=true
 
-        for(i: Int in 1..10) {
+        for(i: Int in 1..4) {
 
             //circle crop
             circleView = ImageView(this.context)

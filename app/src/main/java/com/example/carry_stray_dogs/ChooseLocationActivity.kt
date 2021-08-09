@@ -1,35 +1,41 @@
 package com.example.carry_stray_dogs
 
+import android.app.Activity
 import android.content.Intent
 import android.location.*
 import android.os.Bundle
+import android.util.Log
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
+import android.view.ViewGroup
+import android.widget.*
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_chooselocation.*
 import kotlinx.android.synthetic.main.activity_flightsearch.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.*
 
 
-class ChooseLocationActivity : AppCompatActivity() {
+class ChooseLocationActivity : Fragment() {
 
-    var start : String ?=null
-    var end : String ?=null
-    var type : String ?=null
+    private var myContext: FragmentActivity? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    var start: String? = null
+    var end: String? = null
+    var type: String? = null
 
-        setContentView(R.layout.activity_chooselocation)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        var view: View = inflater.inflate(R.layout.activity_chooselocation, container, false)
 
-        //액션바 제거
-        var actionBar: ActionBar?
-        actionBar = supportActionBar
-        actionBar?.hide()
-
-        var intent = getIntent()
+        /*
         start = intent.getStringExtra("flight_start")
         end = intent.getStringExtra("flight_end")
         type = intent.getStringExtra("flight")
@@ -46,23 +52,31 @@ class ChooseLocationActivity : AppCompatActivity() {
             intent3.putExtra("flight_end",end)
             startActivity(intent3)
         }
-    }
+        */
 
-     fun onClick(v: View?){
-
-        val b = v as Button
+        val b = view as Button
         val buttonText = b.text.toString()
 
-        val intent2 = Intent(this, FlightSearchActivity::class.java)
         if(type.equals("start")){
-            intent2.putExtra("flight_start",buttonText)
-            intent2.putExtra("flight_end",end)
+            //intent2.putExtra("flight_start",buttonText)
+            //intent2.putExtra("flight_end",end)
         }
         else if(type.equals("end")){
-            intent2.putExtra("flight_start",start)
-            intent2.putExtra("flight_end",buttonText)
+            //intent2.putExtra("flight_start",start)
+            //intent2.putExtra("flight_end",buttonText)
         }
-        startActivity(intent2)
+        val transaction = myContext!!.supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container, FlightSearchActivity())
+        transaction.commit()
+
+        return view
     }
+
+
+    override fun onAttach(activity: Activity) {
+        myContext = activity as FragmentActivity
+        super.onAttach(activity)
+    }
+
 
 }

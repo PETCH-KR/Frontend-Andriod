@@ -1,4 +1,5 @@
 package com.example.carry_stray_dogs
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.getIntent
@@ -13,11 +14,13 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import kotlinx.android.synthetic.main.activity_flightsearch.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class Fragment_home : Fragment() {
 
+    private var myContext: FragmentActivity? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -54,12 +57,13 @@ class Fragment_home : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         search_btn.setOnClickListener {
-            activity?.let{
-                val intent = Intent(context, FlightSearchActivity::class.java)
-                intent.putExtra("flight_start","출발지")
-                intent.putExtra("flight_end","도착지")
-                startActivity(intent)
-            }
+            val transaction = myContext!!.supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.container,FlightSearchActivity())
+            transaction.commit()
+
+            //intent.putExtra("flight_start","출발지")
+            //intent.putExtra("flight_end","도착지")
+
         }
 
         game.setOnClickListener {
@@ -70,13 +74,12 @@ class Fragment_home : Fragment() {
         }
 
     }
-    fun newInstant() : mypage_CompanyReview_Fragament
-    {
-        val args = Bundle()
-        val frag = mypage_CompanyReview_Fragament()
-        frag.arguments = args
-        return frag
+
+    override fun onAttach(activity: Activity) {
+        myContext = activity as FragmentActivity
+        super.onAttach(activity)
     }
+
 
 
 }

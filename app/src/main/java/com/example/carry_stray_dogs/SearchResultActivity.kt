@@ -1,5 +1,6 @@
 package com.example.carry_stray_dogs
 
+import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -7,6 +8,9 @@ import android.os.Bundle
 import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
@@ -14,59 +18,61 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.marginLeft
 import androidx.core.view.marginTop
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_flightsearch.endText
 import kotlinx.android.synthetic.main.activity_flightsearch.startText
 import kotlinx.android.synthetic.main.activity_searchresult.*
 
 
-class SearchResultActivity : AppCompatActivity() {
+class SearchResultActivity : Fragment() {
+    private var myContext: FragmentActivity? = null
 
     var dynamicInfo : TextView? =null
     var group : LinearLayout? =null
     var group2 : RelativeLayout? =null
     var circleView : ImageView? =null
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_searchresult)
 
-        //액션바 제거
-        var actionBar : ActionBar?
-        actionBar = supportActionBar
-        actionBar?.hide()
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        var view: View = inflater.inflate(R.layout.activity_searchresult, container, false)
 
+        //var intent = getIntent()
+        //startText.text = intent.getStringExtra("flight_start").toString()
+        //endText.text = intent.getStringExtra("flight_end").toString()
+        //startDate.text = intent.getStringExtra("flight_start_time").toString()
+        //endDate.text = intent.getStringExtra("flight_end_time").toString()
 
-        var intent = getIntent()
-        startText.text = intent.getStringExtra("flight_start").toString()
-        endText.text = intent.getStringExtra("flight_end").toString()
-        startDate.text = intent.getStringExtra("flight_start_time").toString()
-        endDate.text = intent.getStringExtra("flight_end_time").toString()
-        //서버검색
-
+        val backBtn : ImageButton = view.findViewById(R.id.backBtn)
         backBtn.setOnClickListener{
-            val intent = Intent(this,FlightSearchActivity::class.java)
-            intent.putExtra("flight_start",startText.text.toString())
-            intent.putExtra("flight_end",endText.text.toString())
-            startActivity(intent)
+            //intent.putExtra("flight_start",startText.text.toString())
+            //intent.putExtra("flight_end",endText.text.toString())
+            val transaction = myContext!!.supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.container, FlightSearchActivity())
+            transaction.commit()
         }
 
+        val iconbtn : ImageButton = view.findViewById(R.id.iconbtn)
         iconbtn.setOnClickListener{
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
+            val transaction = myContext!!.supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.container, Fragment_home())
+            transaction.commit()
         }
 
-        var tagBtn1 : Button = findViewById(R.id.tagBtn1)
-        var tagBtn2 : Button = findViewById(R.id.tagBtn2)
-        var tagBtn3 : Button = findViewById(R.id.tagBtn3)
-        var tagBtn4 : Button = findViewById(R.id.tagBtn4)
-        var tagBtn5 : Button = findViewById(R.id.tagBtn5)
-        var tagBtn6 : Button = findViewById(R.id.tagBtn6)
-        var tagBtn7 : Button = findViewById(R.id.tagBtn7)
-        var tagBtn8 : Button = findViewById(R.id.tagBtn8)
-        var tagBtn9 : Button = findViewById(R.id.tagBtn9)
-        var tagBtn10 : Button = findViewById(R.id.tagBtn10)
+        var tagBtn1 : Button = view.findViewById(R.id.tagBtn1)
+        var tagBtn2 : Button = view.findViewById(R.id.tagBtn2)
+        var tagBtn3 : Button = view.findViewById(R.id.tagBtn3)
+        var tagBtn4 : Button = view.findViewById(R.id.tagBtn4)
+        var tagBtn5 : Button = view.findViewById(R.id.tagBtn5)
+        var tagBtn6 : Button = view.findViewById(R.id.tagBtn6)
+        var tagBtn7 : Button = view.findViewById(R.id.tagBtn7)
+        var tagBtn8 : Button = view.findViewById(R.id.tagBtn8)
+        var tagBtn9 : Button = view.findViewById(R.id.tagBtn9)
+        var tagBtn10 : Button = view.findViewById(R.id.tagBtn10)
 
         tagBtn1.setOnClickListener{
             if(tagBtn1.textColors.equals(Color.WHITE)){
@@ -168,8 +174,6 @@ class SearchResultActivity : AppCompatActivity() {
                 tagBtn10.setTextColor(Color.WHITE)
             }
         }
-
-
         /*
         //Tag
         val tagView = findViewById<LinearLayout>(R.id.tagView)
@@ -189,26 +193,25 @@ class SearchResultActivity : AppCompatActivity() {
         }
         */
 
-
         //Adapt Dog Info
-        val buttonview = findViewById<LinearLayout>(R.id.Info)
+        val buttonview = view.findViewById<LinearLayout>(R.id.Info)
         buttonview.isClickable=true
 
         for(i: Int in 1..10) {
 
             //circle crop
-            circleView = ImageView(this)
+            circleView = ImageView(context)
             Glide.with(this).load(R.drawable.dog).circleCrop().into(circleView!!)
             circleView!!.layoutParams = LinearLayout.LayoutParams(changeDP(130), changeDP(80))
 
             //group : circle crop image + info text
-            dynamicInfo = TextView(this)
+            dynamicInfo = TextView(context)
             dynamicInfo!!.textSize = 13f
             dynamicInfo!!.text = " 품종 : 믹스견 \n 보호기관 : 00보호기관 \n 출국 가능 마감일 : 2021-01-01 \n 등록일 : 2021-01-01"
             dynamicInfo!!.gravity = Gravity.CENTER_VERTICAL
             dynamicInfo!!.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, changeDP(80))
 
-            group = LinearLayout(this)
+            group = LinearLayout(context)
             group!!.isClickable=true
             //group!!.isDuplicateParentStateEnabled=true
             group!!.orientation = LinearLayout.HORIZONTAL
@@ -229,8 +232,17 @@ class SearchResultActivity : AppCompatActivity() {
 
             buttonview.addView(group)
         }
+
+
+
+        return view
     }
 
+
+    override fun onAttach(activity: Activity) {
+        myContext = activity as FragmentActivity
+        super.onAttach(activity)
+    }
 
     private fun changeDP(value : Int) : Int{
         var displayMetrics = resources.displayMetrics

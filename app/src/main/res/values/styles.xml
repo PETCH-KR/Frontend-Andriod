@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="LodingTheme" parnet="Theme.AppCompat.NoActionBar">
+    <style name="LodingTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/petch_logo</item>
     </style>
 
@@ -10,5 +10,6 @@
         <item name="tabIndicatorColor">@color/white</item>
         <item name="tabIndicatorHeight">2dp</item>
     </style>
+
 
 </resources>

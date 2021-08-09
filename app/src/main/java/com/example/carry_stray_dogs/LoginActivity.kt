@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
 
     //Retrofit
     val retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl( "http://34.127.14.204/")
+        .baseUrl( "https://ziho-dev.com/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     val apiService = retrofit.create(RetrofitAPI::class.java)
@@ -69,14 +69,12 @@ class LoginActivity : AppCompatActivity() {
                 }
 
             }
+        }
 
-
-            var loginBtn = findViewById<ImageButton>(R.id.without_login)
-            loginBtn.setOnClickListener() {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-            }
-
+        var loginBtn = findViewById<ImageButton>(R.id.without_login)
+        loginBtn.setOnClickListener() {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 

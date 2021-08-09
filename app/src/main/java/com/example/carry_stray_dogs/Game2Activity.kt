@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageButton
@@ -21,6 +22,8 @@ import kotlinx.coroutines.launch
 class Game2Activity : AppCompatActivity(){
 
     var dialog : AlertDialog ?=null
+    var moveX = 0f
+    var moveY = 0f
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -31,6 +34,20 @@ class Game2Activity : AppCompatActivity(){
         actionBar?.hide()
 
         var nextBtn = findViewById<ImageButton>(R.id.nextBtn)
+        var dog = findViewById<ImageView>(R.id.dog)
+
+        dog.setOnTouchListener{v , event->
+            when(event.action){
+                MotionEvent.ACTION_DOWN -> {
+                    moveX= v.x - event.rawX
+                    moveY= v.y - event.rawY
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    v.animate() .x(event.rawX + moveX) .y(event.rawY + moveY) .setDuration(0) .start()
+                }
+            }
+            true
+        }
 
         nextBtn.setOnClickListener(){
 

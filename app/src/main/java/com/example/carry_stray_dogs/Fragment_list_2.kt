@@ -24,7 +24,6 @@ class Fragment_list_2 : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         var view :View = inflater.inflate(R.layout.fragment_list2, container, false)
-
         var dog_pic : ImageView = view.findViewById(R.id.dog_Pic)
         Glide.with(this).load(R.drawable.dog).circleCrop().into(dog_pic!!)
         var dog_Info : TextView = view.findViewById(R.id.dog_Info)

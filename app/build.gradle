@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.carry_stray_dogs"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -29,6 +29,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -67,7 +68,8 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
     //kakao
-    implementation group: project.KAKAO_SDK_GROUP, name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+    implementation "com.kakao.sdk:v2-user:2.6.0" // 카카오 로그인
+    implementation "com.kakao.sdk:v2-talk:2.6.0" // 친구, 메시지(카카오톡)
 
     //tablayout
     implementation 'com.google.android.material:material:1.0.0'

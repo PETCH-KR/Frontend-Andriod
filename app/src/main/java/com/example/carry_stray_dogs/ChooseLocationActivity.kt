@@ -35,9 +35,11 @@ class ChooseLocationActivity : Fragment() ,View.OnClickListener {
     ): View? {
         var view: View = inflater.inflate(R.layout.activity_chooselocation, container, false)
 
+        //navigate hide
+        val mainAct = activity as MainActivity
+        mainAct.HideBottomNavigation(true)
 
         val text_message : TextView = view.findViewById(R.id.text_message)
-
         //fragment 데이터 전달 받는
         var bundle: Bundle
         if(arguments!=null){
@@ -130,6 +132,7 @@ class ChooseLocationActivity : Fragment() ,View.OnClickListener {
         transaction2.replace(R.id.container,fragment2)
         transaction2.commit()
     }
+
 
 
 }

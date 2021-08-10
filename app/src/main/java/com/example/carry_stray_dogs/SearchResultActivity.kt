@@ -43,6 +43,10 @@ class SearchResultActivity : Fragment() {
     ): View? {
         var view: View = inflater.inflate(R.layout.activity_searchresult, container, false)
 
+        //navigate hide
+        val mainAct = activity as MainActivity
+        mainAct.HideBottomNavigation(false)
+
         val startText : TextView = view.findViewById(R.id.startText)
         val endText : TextView = view.findViewById(R.id.endText)
         val startDate : TextView = view.findViewById(R.id.startDate)

@@ -44,8 +44,10 @@ class FlightSearchActivity : Fragment() {
 
         val v : View = inflater.inflate(R.layout.activity_flightsearch, container, false)
 
-        //val navigation : BottomNavigationView = this.findViewById(R.id.bottom_navigation)
-        //navigation.visibility = View.INVISIBLE
+        //navigate hide
+        val mainAct = activity as MainActivity
+        mainAct.HideBottomNavigation(true)
+
 
         val start_date = v.findViewById<TextView>(R.id.start_date)
         val end_date = v.findViewById<TextView>(R.id.end_date)

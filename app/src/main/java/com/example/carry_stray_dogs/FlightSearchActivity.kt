@@ -69,11 +69,13 @@ class FlightSearchActivity : Fragment() {
         val minDate = Calendar.getInstance()
         val minDate2 = Calendar.getInstance()
 
-        //var intent = getIntent()
-        //startText.text = intent.getStringExtra("flight_start").toString()
-        //endText.text = intent.getStringExtra("flight_end").toString()
-        startText.text="출발지"
-        endText.text="도착지"
+        //fragment 데이터 전달 받는
+        var bundle: Bundle
+        if(arguments!=null){
+            bundle = arguments as Bundle
+            startText.text=bundle.getString("flight_start")
+            endText.text=bundle.getString("flight_end")
+        }
 
         swapBtn.setOnClickListener {
             val start = startText.text.toString()
@@ -92,22 +94,31 @@ class FlightSearchActivity : Fragment() {
         }
 
         start.setOnClickListener{
+
             val transaction = myContext!!.supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.container,ChooseLocationActivity())
+            val fragment1 : Fragment = ChooseLocationActivity()
+            val bundle = Bundle()
+            bundle.putString("flight","start")
+            bundle.putString("flight_start",startText.text.toString())
+            bundle.putString("flight_end",endText.text.toString())
+            fragment1.arguments=bundle
+            transaction.replace(R.id.container,fragment1)
             transaction.commit()
-            //intent.putExtra("flight","start")
-            //intent.putExtra("flight_start",startText.text.toString())
-            //intent.putExtra("flight_end",endText.text.toString())
 
         }
 
         end.setOnClickListener{
+
             val transaction = myContext!!.supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.container,ChooseLocationActivity())
+            val fragment1 : Fragment = ChooseLocationActivity()
+            val bundle = Bundle()
+            bundle.putString("flight","end")
+            bundle.putString("flight_start",startText.text.toString())
+            bundle.putString("flight_end",endText.text.toString())
+            fragment1.arguments=bundle
+            transaction.replace(R.id.container,fragment1)
             transaction.commit()
-            //intent.putExtra("flight","end")
-            //intent.putExtra("flight_start",startText.text.toString())
-            //intent.putExtra("flight_end",endText.text.toString())
+
         }
 
         start_btn.setOnClickListener{
@@ -149,14 +160,18 @@ class FlightSearchActivity : Fragment() {
             } else if (end == "도착지") {
                 Toast.makeText(context, "도착지를 설정해주세요.", Toast.LENGTH_SHORT).show()
             } else {
+
                 val transaction = myContext!!.supportFragmentManager.beginTransaction()
-                transaction.replace(R.id.container,SearchResultActivity())
+                val fragment1 : Fragment = SearchResultActivity()
+                val bundle = Bundle()
+                bundle.putString("flight_start", startText.text.toString())
+                bundle.putString("flight_end", endText.text.toString())
+                bundle.putString("flight_start_time", start_date.text.toString())
+                bundle.putString("flight_end_time", end_date.text.toString())
+                fragment1.arguments=bundle
+                transaction.replace(R.id.container,fragment1)
                 transaction.commit()
 
-                //intent.putExtra("flight_start", startText.text.toString())
-                //intent.putExtra("flight_end", endText.text.toString())
-                //intent.putExtra("flight_start_time", start_date.text.toString())
-                //intent.putExtra("flight_end_time", end_date.text.toString())
             }
         }
 

@@ -58,11 +58,13 @@ class Fragment_home : Fragment() {
 
         search_btn.setOnClickListener {
             val transaction = myContext!!.supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.container,FlightSearchActivity())
+            val fragment1 : Fragment = FlightSearchActivity()
+            val bundle = Bundle()
+            bundle.putString("flight_start","출발지")
+            bundle.putString("flight_end","도착지")
+            fragment1.arguments=bundle
+            transaction.replace(R.id.container,fragment1)
             transaction.commit()
-
-            //intent.putExtra("flight_start","출발지")
-            //intent.putExtra("flight_end","도착지")
 
         }
 

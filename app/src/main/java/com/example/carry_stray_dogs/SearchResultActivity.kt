@@ -21,9 +21,11 @@ import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.activity_chooselocation.*
 import kotlinx.android.synthetic.main.activity_flightsearch.endText
 import kotlinx.android.synthetic.main.activity_flightsearch.startText
 import kotlinx.android.synthetic.main.activity_searchresult.*
+import org.w3c.dom.Text
 
 
 class SearchResultActivity : Fragment() {
@@ -41,19 +43,34 @@ class SearchResultActivity : Fragment() {
     ): View? {
         var view: View = inflater.inflate(R.layout.activity_searchresult, container, false)
 
-        //var intent = getIntent()
-        //startText.text = intent.getStringExtra("flight_start").toString()
-        //endText.text = intent.getStringExtra("flight_end").toString()
-        //startDate.text = intent.getStringExtra("flight_start_time").toString()
-        //endDate.text = intent.getStringExtra("flight_end_time").toString()
+        val startText : TextView = view.findViewById(R.id.startText)
+        val endText : TextView = view.findViewById(R.id.endText)
+        val startDate : TextView = view.findViewById(R.id.startDate)
+        val endDate : TextView = view.findViewById(R.id.endDate)
+        //fragment 데이터 전달 받는
+        var bundle: Bundle
+        if(arguments!=null){
+            bundle = arguments as Bundle
+
+            startText.text = bundle.getString("flight_start")
+            endText.text = bundle.getString("flight_end")
+            startDate.text = bundle.getString("flight_start_time")
+            endDate.text = bundle.getString("flight_end_time")
+
+        }
 
         val backBtn : ImageButton = view.findViewById(R.id.backBtn)
         backBtn.setOnClickListener{
-            //intent.putExtra("flight_start",startText.text.toString())
-            //intent.putExtra("flight_end",endText.text.toString())
+
             val transaction = myContext!!.supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.container, FlightSearchActivity())
+            val fragment1 : Fragment = FlightSearchActivity()
+            val bundle = Bundle()
+            bundle.putString("flight_start",startText.text.toString())
+            bundle.putString("flight_end",endText.text.toString())
+            fragment1.arguments=bundle
+            transaction.replace(R.id.container,fragment1)
             transaction.commit()
+
         }
 
         val iconbtn : ImageButton = view.findViewById(R.id.iconbtn)

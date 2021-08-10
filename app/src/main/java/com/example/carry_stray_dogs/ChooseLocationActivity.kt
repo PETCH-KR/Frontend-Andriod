@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.*
 
 
-class ChooseLocationActivity : Fragment() {
+class ChooseLocationActivity : Fragment() ,View.OnClickListener {
 
     private var myContext: FragmentActivity? = null
 
@@ -35,39 +35,72 @@ class ChooseLocationActivity : Fragment() {
     ): View? {
         var view: View = inflater.inflate(R.layout.activity_chooselocation, container, false)
 
-        /*
-        start = intent.getStringExtra("flight_start")
-        end = intent.getStringExtra("flight_end")
-        type = intent.getStringExtra("flight")
 
-        if (type.equals("start")) {
-            text_message.setText("어디서 출발하시나요?")
-        } else if (type.equals("end")) {
-            text_message.setText("어디로 도착하시나요?")
+        val text_message : TextView = view.findViewById(R.id.text_message)
+
+        //fragment 데이터 전달 받는
+        var bundle: Bundle
+        if(arguments!=null){
+            bundle = arguments as Bundle
+
+            start = bundle.getString("flight_start")
+            end = bundle.getString("flight_end")
+            type = bundle.getString("flight")
+            if (type.equals("start")) {
+                text_message.setText("어디서 출발하시나요?")
+            } else if (type.equals("end")) {
+                text_message.setText("어디로 도착하시나요?")
+            }
         }
 
+        val backBtn : ImageButton = view.findViewById(R.id.backBtn)
         backBtn.setOnClickListener {
-            val intent3 = Intent(this, FlightSearchActivity::class.java)
-            intent3.putExtra("flight_start",start)
-            intent3.putExtra("flight_end",end)
-            startActivity(intent3)
-        }
-        */
 
-        val b = view as Button
-        val buttonText = b.text.toString()
+            val transaction = myContext!!.supportFragmentManager.beginTransaction()
+            val fragment1 : Fragment = FlightSearchActivity()
+            val bundle = Bundle()
+            bundle.putString("flight_start",start)
+            bundle.putString("flight_end",end)
+            fragment1.arguments=bundle
+            transaction.replace(R.id.container,fragment1)
+            transaction.commit()
+        }
 
-        if(type.equals("start")){
-            //intent2.putExtra("flight_start",buttonText)
-            //intent2.putExtra("flight_end",end)
-        }
-        else if(type.equals("end")){
-            //intent2.putExtra("flight_start",start)
-            //intent2.putExtra("flight_end",buttonText)
-        }
-        val transaction = myContext!!.supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, FlightSearchActivity())
-        transaction.commit()
+
+        val GMP : Button = view.findViewById(R.id.GMP)
+        GMP.setOnClickListener(this)
+        val INC : Button = view.findViewById(R.id.INC)
+        INC.setOnClickListener(this)
+        val CJU : Button = view.findViewById(R.id.CJU)
+        CJU.setOnClickListener(this)
+        val LAX : Button = view.findViewById(R.id.LAX)
+        LAX.setOnClickListener(this)
+        val SFO : Button = view.findViewById(R.id.SFO)
+        SFO.setOnClickListener(this)
+        val JFK : Button = view.findViewById(R.id.JFK)
+        JFK.setOnClickListener(this)
+        val EWR : Button = view.findViewById(R.id.EWR)
+        EWR.setOnClickListener(this)
+        val LGA : Button = view.findViewById(R.id.LGA)
+        LGA.setOnClickListener(this)
+        val SWF : Button = view.findViewById(R.id.SWF)
+        SWF.setOnClickListener(this)
+        val HNL : Button = view.findViewById(R.id.HNL)
+        HNL.setOnClickListener(this)
+        val BOS : Button = view.findViewById(R.id.BOS)
+        BOS.setOnClickListener(this)
+        val YYZ : Button = view.findViewById(R.id.YYZ)
+        YYZ.setOnClickListener(this)
+        val YKF : Button = view.findViewById(R.id.YKF)
+        YKF.setOnClickListener(this)
+        val YHM : Button = view.findViewById(R.id.YHM)
+        YHM.setOnClickListener(this)
+        val YVR : Button = view.findViewById(R.id.YVR)
+        YVR.setOnClickListener(this)
+        val YXX : Button = view.findViewById(R.id.YXX)
+        YXX.setOnClickListener(this)
+        val CXH : Button = view.findViewById(R.id.CXH)
+        CXH.setOnClickListener(this)
 
         return view
     }
@@ -76,6 +109,26 @@ class ChooseLocationActivity : Fragment() {
     override fun onAttach(activity: Activity) {
         myContext = activity as FragmentActivity
         super.onAttach(activity)
+    }
+
+    override fun onClick(v: View?) {
+        val b = v as Button
+        val buttonText = b.text.toString()
+
+        val transaction2 = myContext!!.supportFragmentManager.beginTransaction()
+        val fragment2 : Fragment = FlightSearchActivity()
+        val bundle2 = Bundle()
+        if(type.equals("start")){
+            bundle2.putString("flight_start",buttonText)
+            bundle2.putString("flight_end",end)
+        }
+        else if(type.equals("end")){
+            bundle2.putString("flight_start",start)
+            bundle2.putString("flight_end",buttonText)
+        }
+        fragment2.arguments=bundle2
+        transaction2.replace(R.id.container,fragment2)
+        transaction2.commit()
     }
 
 

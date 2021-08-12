@@ -247,8 +247,19 @@ class SearchResultActivity : Fragment() {
             group!!.addView(dynamicInfo)
 
             group!!.setOnClickListener {
-                Log.i("click layout","$i 번째 layout")
-                //button event
+
+                val transaction = myContext!!.supportFragmentManager.beginTransaction()
+                val fragment1 : Fragment = AdoptInfoActivity()
+                val bundle = Bundle()
+                bundle.putString("flight_start",startText.text.toString())
+                bundle.putString("flight_end",endText.text.toString())
+                bundle.putString("flight_start_time",startDate.text.toString())
+                bundle.putString("flight_end_time",endDate.text.toString())
+                bundle.putString("dog_name","멍멍이")
+                bundle.putString("dog_care","petch기관")
+                fragment1.arguments=bundle
+                transaction.replace(R.id.container,fragment1)
+                transaction.commit()
             }
 
             buttonview.addView(group)

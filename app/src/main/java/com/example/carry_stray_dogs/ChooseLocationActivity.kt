@@ -60,6 +60,7 @@ class ChooseLocationActivity : Fragment() ,View.OnClickListener {
 
             val transaction = myContext!!.supportFragmentManager.beginTransaction()
             val fragment1 : Fragment = FlightSearchActivity()
+
             val bundle = Bundle()
             bundle.putString("flight_start",start)
             bundle.putString("flight_end",end)
@@ -118,7 +119,8 @@ class ChooseLocationActivity : Fragment() ,View.OnClickListener {
         val buttonText = b.text.toString()
 
         val transaction2 = myContext!!.supportFragmentManager.beginTransaction()
-        val fragment2 : Fragment = FlightSearchActivity()
+        val fragment2 : Fragment= FlightSearchActivity()
+
         val bundle2 = Bundle()
         if(type.equals("start")){
             bundle2.putString("flight_start",buttonText)

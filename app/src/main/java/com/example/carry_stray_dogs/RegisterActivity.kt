@@ -1,6 +1,7 @@
 package com.example.carry_stray_dogs
 
 import android.app.Activity
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -30,6 +31,9 @@ import kotlinx.android.synthetic.main.activity_flightsearch.endText
 import kotlinx.android.synthetic.main.activity_flightsearch.startText
 import kotlinx.android.synthetic.main.activity_searchresult.*
 import org.w3c.dom.Text
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 
 class RegisterActivity : Fragment() {
@@ -37,7 +41,7 @@ class RegisterActivity : Fragment() {
     var dog_name: String? = null
     var dog_care: String? = null
 
-
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -52,6 +56,7 @@ class RegisterActivity : Fragment() {
         var bundle: Bundle = arguments as Bundle
         dog_name = bundle.getString("dog_name").toString()
         dog_care = bundle.getString("dog_care").toString()
+
         Log.i("DogInfo : ","dog name: $dog_name , dog_care: $dog_care")
 
         val backBtn : ImageButton = view.findViewById(R.id.backBtn)
@@ -69,6 +74,19 @@ class RegisterActivity : Fragment() {
         val dogPic : ImageView = view.findViewById(R.id.dogPic)
         Glide.with(this).load(R.drawable.dog).circleCrop().into(dogPic!!)
 
+
+        //trip schedule
+        val start_date = view.findViewById<TextView>(R.id.startDate)
+        val end_date = view.findViewById<TextView>(R.id.endDate)
+        val startText = view.findViewById<TextView>(R.id.startText)
+        val endText = view.findViewById<TextView>(R.id.endText)
+
+        //나라
+        startText.text = "출발지"
+        endText.text = "도착지"
+        //날짜
+        start_date.text = "2021.01.01"
+        end_date.text ="2021.01.01"
 
         return view
     }

@@ -3,6 +3,7 @@ package com.example.carry_stray_dogs
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
+import android.opengl.Visibility
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,7 @@ import android.util.TypedValue
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.INVISIBLE
 import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
@@ -29,6 +31,10 @@ import kotlinx.android.synthetic.main.activity_chooselocation.*
 import kotlinx.android.synthetic.main.activity_flightsearch.endText
 import kotlinx.android.synthetic.main.activity_flightsearch.startText
 import kotlinx.android.synthetic.main.activity_searchresult.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.w3c.dom.Text
 
 
@@ -86,6 +92,14 @@ class AdoptInfoActivity : Fragment() {
         }
 
         val careInfo : LinearLayout = view.findViewById(R.id.careInfo)
+        //레이아웃 숨기기
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(3000)
+            careInfo.visibility = View.GONE
+        }
+
+        val scrollView : ScrollView = view.findViewById(R.id.scrollView)
+        //scroll event : 위에 닿으면 careInfo 보여지기
 
         val careName : TextView = view.findViewById(R.id.careName)
         careName.text = dog_care

@@ -237,7 +237,7 @@
                     android:layout_marginTop="45dp"
                     android:layout_marginLeft="20dp"
                     android:textSize="16dp"
-                    android:text="이동봉사 날짜 선택하기"
+                    android:text="이동봉사 가능 날짜"
                     android:layout_marginBottom="10dp"
                     android:textStyle="bold"/>
 
@@ -257,6 +257,18 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginLeft="20dp"/>
 
+                    <ImageButton
+                        android:id="@+id/start"
+                        android:layout_width="160dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="17dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:text="출발지"
+                        android:backgroundTint="@color/white"
+                        ></ImageButton>
+
                     <TextView
                         android:id="@+id/startText"
                         android:layout_width="140dp"
@@ -268,13 +280,25 @@
                         android:text="출발지"
                         ></TextView>
 
+                    <ImageButton
+                        android:id="@+id/end"
+                        android:layout_width="170dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="17dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginLeft="220dp"
+                        android:gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:text="도착지"
+                        ></ImageButton>
+
                     <TextView
                         android:id="@+id/endText"
                         android:layout_width="140dp"
                         android:layout_height="45dp"
                         android:layout_marginTop="17dp"
                         android:scaleType="fitCenter"
-                        android:layout_marginLeft="240dp"
+                        android:layout_marginLeft="230dp"
                         android:gravity="center_vertical"
                         android:text="도착지"
                         ></TextView>
@@ -289,16 +313,38 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginLeft="20dp"/>
 
+                    <ImageButton
+                        android:id="@+id/start_btn"
+                        android:layout_width="170dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="77dp"
+                        android:gravity="center_vertical"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/white"
+                        android:text="기한1"></ImageButton>
+
                     <TextView
                         android:id="@+id/startDate"
                         android:layout_width="140dp"
                         android:layout_height="45dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="77dp"
+                        android:gravity="center_vertical"
+                        android:scaleType="fitCenter"
+                        android:text="기한1"></TextView>
+
+                    <ImageButton
+                        android:id="@+id/end_btn"
+                        android:layout_width="170dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="77dp"
                         android:scaleType="fitCenter"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="215dp"
                         android:gravity="center_vertical"
-                        android:text="기한1"
-                        ></TextView>
+                        android:backgroundTint="@color/white"
+                        android:text="기한2"
+                        ></ImageButton>
 
                     <TextView
                         android:id="@+id/endDate"
@@ -315,12 +361,11 @@
                         android:id="@+id/swapBtn"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:backgroundTint="#00ff"
-                        android:layout_marginTop="15dp"
                         android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="#00ff"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/register_swapicon"
-                        />
+                        app:srcCompat="@drawable/register_swapicon" />
 
                 </FrameLayout>
 
@@ -671,6 +716,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="40dp"
+                        android:layout_marginBottom="10dp"
                         android:orientation="vertical">
 
 

@@ -27,9 +27,6 @@ class CompanyInfo_AdoptInfo_Fragment  : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         var view :View = inflater.inflate(R.layout.activity_companyinfo_adoptinfo, container, false)
-
-
-
         return view
     }
 

@@ -51,6 +51,8 @@ class Game2Activity : AppCompatActivity(){
 
         nextBtn.setOnClickListener(){
 
+            changeView()
+            /*
             var question = findViewById<ImageView>(R.id.question)
             var question2 = findViewById<TextView>(R.id.question2)
             question.setVisibility(View.INVISIBLE)
@@ -69,6 +71,7 @@ class Game2Activity : AppCompatActivity(){
                 changeView()
             }
 
+             */
         }
 
     }

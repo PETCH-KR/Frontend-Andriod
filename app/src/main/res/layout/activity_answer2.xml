@@ -17,7 +17,10 @@
             android:layout_marginLeft="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="22dp"
+            android:fontFamily="@font/applefont"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:text="A. 소형견은 기내, 대형견은 수화물!"
             android:padding="0dp" />
 
@@ -25,29 +28,34 @@
             android:layout_gravity="left"
             android:id="@+id/imageView12"
             android:layout_marginLeft="40dp"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_height="30dp"
-            android:textSize="15dp"
-            android:text="A. 소형견은 .."
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:fontFamily="@font/applefont"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="소형견은 .."
             android:padding="0dp" />
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="110dp"
-            app:srcCompat="@drawable/game2_img1" />
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@drawable/game2_img1" />
 
             <ImageView
                 android:id="@+id/party1"
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="60dp"
                 app:srcCompat="@drawable/answer2_party" />
 
             <ImageView
@@ -61,33 +69,36 @@
                 android:id="@+id/smalldog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="210dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="190dp"
                 app:srcCompat="@drawable/game3_dog" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="260dp"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="16dp"
                 android:text="소형견 (기내)"
-                android:layout_marginTop="270dp"/>
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
 
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="350dp"
-            app:srcCompat="@drawable/game2_img2" />
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="350dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@drawable/game2_img2" />
 
             <ImageView
                 android:id="@+id/bigdog"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="380dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="380dp"
                 app:srcCompat="@drawable/game2_bigdog" />
 
             <TextView
@@ -96,9 +107,11 @@
                 android:layout_marginTop="510dp"
                 android:gravity="center"
                 android:text="대형견 (수화물)"
+                android:textColor="@color/white"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
         </FrameLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

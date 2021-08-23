@@ -52,11 +52,19 @@ class Game3Activity : AppCompatActivity(){
 
             var question = findViewById<ImageView>(R.id.question)
             var question2 = findViewById<TextView>(R.id.question2)
-            question.setVisibility(View.INVISIBLE)
-            question2.setVisibility(View.INVISIBLE)
+            question.visibility = View.INVISIBLE
+            question2.visibility = View.INVISIBLE
+            var image1 = findViewById<ImageView>(R.id.imageView7)
+            var image2 = findViewById<ImageView>(R.id.imageView8)
+            image1.visibility=View.INVISIBLE
+            image2.visibility=View.INVISIBLE
+            var dogImage = findViewById<ImageView>(R.id.dog)
+            var dogInfo = findViewById<TextView>(R.id.dogInfo)
+            dogImage.visibility=View.INVISIBLE
+            dogInfo.visibility=View.INVISIBLE
 
             val builder = AlertDialog.Builder(this)
-            val view: View = LayoutInflater.from(this).inflate(R.layout.activity_answer1, null)
+            val view: View = LayoutInflater.from(this).inflate(R.layout.activity_answer2, null)
             dialog = builder.create()
             dialog!!.setView(view)
             dialog!!.window?.setBackgroundDrawableResource(android.R.color.transparent)

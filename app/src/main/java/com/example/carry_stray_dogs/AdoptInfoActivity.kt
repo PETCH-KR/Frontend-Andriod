@@ -1,41 +1,26 @@
 package com.example.carry_stray_dogs
 
 import android.app.Activity
-import android.content.Intent
-import android.graphics.Color
-import android.opengl.Visibility
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import android.util.TypedValue
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.INVISIBLE
 import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.ActionBar
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.marginLeft
-import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_chooselocation.*
-import kotlinx.android.synthetic.main.activity_flightsearch.endText
-import kotlinx.android.synthetic.main.activity_flightsearch.startText
 import kotlinx.android.synthetic.main.activity_searchresult.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.w3c.dom.Text
 
 
 class AdoptInfoActivity : Fragment() {
@@ -48,6 +33,7 @@ class AdoptInfoActivity : Fragment() {
     private var fragment3: CompanyInfo_CompanyReview_Fragment? = null
     var viewPager: ViewPager? = null
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -93,13 +79,27 @@ class AdoptInfoActivity : Fragment() {
 
         val careInfo : LinearLayout = view.findViewById(R.id.careInfo)
         //레이아웃 숨기기
+        /*
         CoroutineScope(Dispatchers.Main).launch {
             delay(3000)
             careInfo.visibility = View.GONE
-        }
+        }*/
 
         val scrollView : ScrollView = view.findViewById(R.id.scrollView)
+        val toplayout :LinearLayout = view.findViewById(R.id.toplayout)
         //scroll event : 위에 닿으면 careInfo 보여지기
+        var temp = 0
+        if(temp==0 && scrollView.top==toplayout.bottom){
+            temp=1
+            Log.i("scroll:" ,"top")
+            CoroutineScope(Dispatchers.Main).launch {
+                careInfo.visibility = View.VISIBLE
+                delay(2000)
+                careInfo.visibility = View.GONE
+                temp=0
+            }
+        }
+
 
         val careName : TextView = view.findViewById(R.id.careName)
         careName.text = dog_care
@@ -148,3 +148,4 @@ class AdoptInfoActivity : Fragment() {
 
     }
 }
+

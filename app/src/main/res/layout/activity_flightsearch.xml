@@ -37,6 +37,7 @@
             android:layout_marginLeft="30dp"
             android:textSize="30dp"
             android:textStyle="bold"
+            android:fontFamily="@font/applefont"
             android:text="언제, 어디로 &#10;떠나시나요?"
              />
 
@@ -71,6 +72,7 @@
             android:layout_marginRight="30dp"
             android:singleLine="true"
             android:text="출발지"
+            android:fontFamily="@font/applefont"
             android:textSize="18dp"
             android:gravity="center_vertical"
             android:scrollbars="horizontal"
@@ -97,6 +99,7 @@
             android:layout_marginRight="30dp"
             android:singleLine="true"
             android:text="도착지"
+            android:fontFamily="@font/applefont"
            android:textSize="18dp"
             android:gravity="center_vertical"
             android:scrollbars="horizontal"

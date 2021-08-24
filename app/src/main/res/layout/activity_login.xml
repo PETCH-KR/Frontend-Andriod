@@ -39,6 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:text="이메일   "
+                    android:fontFamily="@font/applefont"
                     android:textColor="#d8d8d8"
                     android:textSize="18dp" />
 
@@ -48,6 +49,7 @@
                     android:layout_height="40dp"
                     android:backgroundTint="#d8d8d8"
                     android:hint=" "
+                    android:fontFamily="@font/applefont"
                     android:textSize="20dp"
                     android:gravity="center"
                     android:scrollbars="horizontal"
@@ -68,6 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:textSize="18dp"
+                    android:fontFamily="@font/applefont"
                     android:textColor="#d8d8d8"
                     android:text="비밀번호" />
 
@@ -78,6 +81,7 @@
                     android:backgroundTint="#d8d8d8"
                     android:gravity="center"
                     android:hint=" "
+                    android:fontFamily="@font/applefont"
                     android:inputType="textPassword"
                     android:scrollbars="horizontal"
                     android:selectAllOnFocus="false"

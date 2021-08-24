@@ -29,6 +29,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="54dp"
         android:textSize="22sp"
+        android:fontFamily="@font/applefont"
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:text="진행중인 봉사" />
@@ -39,6 +40,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="3dp"
             android:textSize="15sp"
+            android:fontFamily="@font/applefont"
             android:layout_marginLeft="20dp"
             android:text="2021.01.01 16:24분 런던행" />
 
@@ -124,6 +126,7 @@
             android:textSize="16dp"
             android:layout_marginLeft="20dp"
             android:textStyle="bold"
+            android:fontFamily="@font/applefont"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="15dp"
             android:text="이전 봉사" />

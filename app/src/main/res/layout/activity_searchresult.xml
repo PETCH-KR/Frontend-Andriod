@@ -57,6 +57,7 @@
                 android:layout_marginLeft="35dp"
                 android:gravity="center_vertical"
                 android:text="출발지"
+                android:fontFamily="@font/applefont"
                 ></TextView>
 
             <TextView
@@ -68,6 +69,7 @@
                 android:layout_marginLeft="240dp"
                 android:gravity="center_vertical"
                 android:text="도착지"
+                android:fontFamily="@font/applefont"
                 ></TextView>
 
             <ImageView
@@ -86,6 +88,7 @@
                 android:layout_height="45dp"
                 android:layout_marginTop="177dp"
                 android:scaleType="fitCenter"
+                android:fontFamily="@font/applefont"
                 android:layout_marginLeft="40dp"
                 android:gravity="center_vertical"
                 android:text="기한1"
@@ -100,6 +103,7 @@
                 android:layout_marginLeft="230dp"
                 android:gravity="center_vertical"
                 android:text="기한2"
+                android:fontFamily="@font/applefont"
                 ></TextView>
 
             <ImageButton
@@ -127,6 +131,7 @@
                 android:textSize="16dp"
                 android:layout_marginLeft="20dp"
                 android:textStyle="bold"
+                android:fontFamily="@font/applefont"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="이동봉사를 기다리는 유기견" />

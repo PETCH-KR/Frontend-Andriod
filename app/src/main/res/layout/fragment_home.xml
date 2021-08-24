@@ -104,6 +104,7 @@
         android:layout_marginLeft="27dp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/applefont"
         android:layout_marginBottom="14dp"
         android:text="이동봉사를 기다리는 유기견" />
 
@@ -203,6 +204,7 @@
                 android:layout_marginTop="19dp"
                 android:layout_marginBottom="14dp"
                 android:text="이동봉사 후기"
+                android:fontFamily="@font/applefont"
                 android:textSize="14dp"
                 android:textStyle="bold" />
 

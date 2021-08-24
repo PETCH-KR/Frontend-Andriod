@@ -86,6 +86,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/applefont"
                     android:layout_marginBottom="15dp"
                     android:text="00보호기관"></TextView>
                 <TextView
@@ -93,6 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
+                    android:fontFamily="@font/applefont"
                     android:layout_marginBottom="8dp"
                     android:text="00-0000-0000"></TextView>
 
@@ -100,6 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
+                    android:fontFamily="@font/applefont"
                     android:layout_marginBottom="5dp"
                     android:text="기관주소"></TextView>
 
@@ -108,6 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
+                    android:fontFamily="@font/applefont"
                     android:text="서울시 동작구 상도동"></TextView>
 
             </LinearLayout>
@@ -149,6 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/applefont"
                     android:text="비영리 사업자등록증"
                     android:textSize="16dp" />
 
@@ -163,6 +168,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/applefont"
                     android:text="자원봉사단체 등록증"
                     android:textSize="16dp" />
 
@@ -174,6 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="35dp"
+                android:fontFamily="@font/applefont"
                 android:text="기관에서 제공하는 봉사자 케어 리스트"
                 android:textSize="15dp"
                 android:textStyle="bold" />
@@ -273,18 +280,15 @@
                     app:tabMode="fixed">
 
                     <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/applefont"
                         android:text="유기견 정보"/>
 
                     <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="입양처 정보"/>
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/applefont"
                         android:text="기관 후기"/>
 
                 </com.google.android.material.tabs.TabLayout>

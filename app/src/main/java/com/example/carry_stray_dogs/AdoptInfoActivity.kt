@@ -29,7 +29,7 @@ class AdoptInfoActivity : Fragment() {
     var dog_care: String? = null
 
     private var fragment1: CompanyInfo_DogInfo_Fragment? = null
-    private var fragment2: CompanyInfo_AdoptInfo_Fragment? = null
+    //private var fragment2: CompanyInfo_AdoptInfo_Fragment? = null
     private var fragment3: CompanyInfo_CompanyReview_Fragment? = null
     var viewPager: ViewPager? = null
 
@@ -42,7 +42,7 @@ class AdoptInfoActivity : Fragment() {
 
         viewPager = view.findViewById(R.id.viewPager)
         fragment1 = CompanyInfo_DogInfo_Fragment()
-        fragment2 = CompanyInfo_AdoptInfo_Fragment()
+        //fragment2 = CompanyInfo_AdoptInfo_Fragment()
         fragment3 = CompanyInfo_CompanyReview_Fragment()
         viewPager!!.adapter = AdoptInfoActivity.FragmentAdapter(childFragmentManager)
         viewPager!!.currentItem = 0
@@ -78,16 +78,11 @@ class AdoptInfoActivity : Fragment() {
         }
 
         val careInfo : LinearLayout = view.findViewById(R.id.careInfo)
-        //레이아웃 숨기기
-        /*
-        CoroutineScope(Dispatchers.Main).launch {
-            delay(3000)
-            careInfo.visibility = View.GONE
-        }*/
-
         val scrollView : ScrollView = view.findViewById(R.id.scrollView)
         val toplayout :LinearLayout = view.findViewById(R.id.toplayout)
         //scroll event : 위에 닿으면 careInfo 보여지기
+        //레이아웃 숨기기
+        /*
         var temp = 0
         if(temp==0 && scrollView.top==toplayout.bottom){
             temp=1
@@ -99,6 +94,8 @@ class AdoptInfoActivity : Fragment() {
                 temp=0
             }
         }
+
+         */
 
 
         val careName : TextView = view.findViewById(R.id.careName)
@@ -126,7 +123,7 @@ class AdoptInfoActivity : Fragment() {
             val fragment =  when(position)
             {
                 0->CompanyInfo_DogInfo_Fragment().newInstant()
-                1->CompanyInfo_AdoptInfo_Fragment().newInstant()
+                //1->CompanyInfo_AdoptInfo_Fragment().newInstant()
                 else -> CompanyInfo_CompanyReview_Fragment().newInstant()
 
             }
@@ -134,14 +131,14 @@ class AdoptInfoActivity : Fragment() {
         }
 
         //tab의 개수만큼 return
-        override fun getCount(): Int = 3
+        override fun getCount(): Int = 2
 
         //tab의 이름 fragment마다 바꾸게 하기
         override fun getPageTitle(position: Int): CharSequence? {
             val title = when(position)
             {
                 0->"유기견 정보"
-                1->"입양처 정보"
+                //1->"입양처 정보"
                 else -> "기관 후기"
             }
             return title     }

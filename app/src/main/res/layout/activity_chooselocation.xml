@@ -37,6 +37,7 @@
                 android:layout_marginLeft="30dp"
                 android:textSize="30dp"
                 android:textStyle="bold"
+                android:fontFamily="@font/applefont"
                 android:text="어디서 출발하시나요?"
                 />
 
@@ -64,6 +65,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:singleLine="true"
+                android:fontFamily="@font/applefont"
                 android:text="대한민국 (KR)"
                 android:textSize="15dp"
                 android:backgroundTint="#00ff"

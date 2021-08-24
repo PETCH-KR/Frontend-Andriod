@@ -31,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="140dp"
             android:textSize="14dp"
+            android:fontFamily="@font/applefont"
             android:text="품종 : 믹스견 \n보호기관 : 00보호기관\n출국 가능 마감일 : 2021-01--01\n등록일 : 2021-01-01"/>
 
     </LinearLayout>

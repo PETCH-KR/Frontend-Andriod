@@ -1,19 +1,23 @@
 package com.example.carry_stray_dogs
 
 import android.app.Activity
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.core.view.marginBottom
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_chooselocation.*
 import kotlinx.android.synthetic.main.activity_searchresult.*
@@ -27,6 +31,11 @@ class AdoptInfoActivity : Fragment() {
     private var myContext: FragmentActivity? = null
     var dog_name: String? = null
     var dog_care: String? = null
+
+    var dynamicInfo : TextView? =null
+    var group : LinearLayout? =null
+    var group2 : RelativeLayout? =null
+    var circleView : ImageView? =null
 
     private var fragment1: CompanyInfo_DogInfo_Fragment? = null
     //private var fragment2: CompanyInfo_AdoptInfo_Fragment? = null
@@ -100,6 +109,62 @@ class AdoptInfoActivity : Fragment() {
 
         val careName : TextView = view.findViewById(R.id.careName)
         careName.text = dog_care
+
+
+        //deadline Dog Info
+        val buttonview = view.findViewById<LinearLayout>(R.id.deadlineInfo)
+        buttonview.isClickable=true
+
+        for(i: Int in 1..10) {
+
+            //circle crop
+            circleView = ImageView(context)
+            Glide.with(this).load(R.drawable.dog).circleCrop().into(circleView!!)
+            circleView!!.layoutParams = LinearLayout.LayoutParams(changeDP(80), changeDP(80))
+
+
+            //group : circle crop image + info text
+            dynamicInfo = TextView(context)
+            dynamicInfo!!.textSize = 13f
+            dynamicInfo!!.text = "\n 마감일 : 2021-01-01 \n등록일 : 2021-01-01"
+            dynamicInfo!!.gravity = Gravity.CENTER_HORIZONTAL
+            dynamicInfo!!.layoutParams = LinearLayout.LayoutParams(changeDP(130), changeDP(80))
+
+            group = LinearLayout(context)
+            group!!.isClickable=true
+            //group!!.isDuplicateParentStateEnabled=true
+            group!!.orientation = LinearLayout.VERTICAL
+            val group_params = LinearLayout.LayoutParams(changeDP(130), changeDP(150))
+            group_params.setMargins(changeDP(5), changeDP(0), changeDP(5), changeDP(0))
+            group!!.layoutParams = group_params
+            group!!.setBackgroundColor(Color.WHITE)
+            circleView!!.isClickable = false
+            dynamicInfo!!.isClickable = false
+            group!!.addView(circleView)
+            group!!.addView(dynamicInfo)
+            group!!.gravity = Gravity.CENTER_HORIZONTAL
+
+            group!!.setOnClickListener {
+
+                /*
+                val transaction = myContext!!.supportFragmentManager.beginTransaction()
+                val fragment1 : Fragment = AdoptInfoActivity()
+                val bundle = Bundle()
+                bundle.putString("flight_start",startText.text.toString())
+                bundle.putString("flight_end",endText.text.toString())
+                bundle.putString("flight_start_time",startDate.text.toString())
+                bundle.putString("flight_end_time",endDate.text.toString())
+                bundle.putString("dog_name","멍멍이")
+                bundle.putString("dog_care","petch기관")
+                fragment1.arguments=bundle
+                transaction.replace(R.id.container,fragment1)
+                transaction.commit()
+                 */
+
+            }
+
+            buttonview.addView(group)
+        }
 
 
         return view

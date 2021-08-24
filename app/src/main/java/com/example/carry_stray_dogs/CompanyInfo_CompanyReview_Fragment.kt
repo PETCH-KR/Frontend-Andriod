@@ -37,7 +37,7 @@ class CompanyInfo_CompanyReview_Fragment  : Fragment(){
         val buttonview = view.findViewById<LinearLayout>(R.id.Info)
         buttonview.isClickable=true
 
-        for(i: Int in 1..10) {
+        for(i: Int in 1..4) {
 
             //둥근 사각형
             circleView = ImageView(this.context)

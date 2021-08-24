@@ -305,6 +305,32 @@
 
         </LinearLayout>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/applefont"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="출국 마감일이 임박한 유기견"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="150dp">
+
+            <LinearLayout
+                android:id="@+id/deadlineInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+            </HorizontalScrollView>
 
     </LinearLayout>
         </ScrollView>

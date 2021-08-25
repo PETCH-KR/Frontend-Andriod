@@ -24,17 +24,17 @@
 
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_marginTop="20dp"
             android:paddingBottom="10dp"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            app:srcCompat="@drawable/join_line"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="40dp"
+                app:srcCompat="@drawable/join_line" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -45,42 +45,42 @@
                 android:textSize="16dp"
                 android:text="이메일"/>
 
-        </FrameLayout>
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_marginTop="30dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                app:srcCompat="@drawable/join_line"/>
-
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/emailText"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/applefont"
-                android:layout_marginLeft="40dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:scrollbars="horizontal"
+                android:backgroundTint="@color/white"
+                android:layout_marginLeft="110dp"
                 android:textSize="16dp"
-                android:text="비밀번호"/>
+                />
+
+            <TextView
+                android:id="@+id/email_error_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="105dp"
+                android:textSize="12dp"
+                android:textColor="@color/blue"
+                android:text="이메일을 정확하게 입력해주세요."/>
 
         </FrameLayout>
+
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_marginTop="30dp"
-            android:paddingTop="10dp"
+            android:layout_marginTop="10dp"
             android:paddingBottom="10dp"
+            android:paddingTop="10dp"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 app:srcCompat="@drawable/join_line"/>
@@ -90,83 +90,164 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/applefont"
                 android:layout_marginLeft="40dp"
-                android:textSize="16dp"
-                android:text="비밀번호 확인"/>
-
-        </FrameLayout>
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_marginTop="30dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                app:srcCompat="@drawable/join_line"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/applefont"
-                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
                 android:textSize="16dp"
                 android:text="이름"/>
 
+            <EditText
+                android:id="@+id/nameText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/applefont"
+                android:scrollbars="horizontal"
+                android:gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginLeft="150dp"
+                android:textSize="16dp"
+                />
+
+            <TextView
+                android:id="@+id/name_error_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="55dp"
+                android:textSize="12dp"
+                android:textColor="@color/blue"
+                android:text="이름을 정확하게 입력해주세요."/>
+
         </FrameLayout>
+
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_height="5dp"
                 android:layout_marginLeft="40dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginRight="40dp"
-                app:srcCompat="@drawable/join_line"/>
+                app:srcCompat="@drawable/join_line" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/applefont"
                 android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
                 android:textSize="16dp"
-                android:text="여권"/>
+                android:text="비밀번호"/>
+
+            <EditText
+                android:id="@+id/pwdText"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/applefont"
+                android:gravity="center"
+
+                android:scrollbars="horizontal"
+                android:textSize="16dp" />
+
+            <ImageButton
+                android:id="@+id/pwdBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/white"
+                app:srcCompat="@drawable/join_lock"
+                android:layout_marginLeft="330dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/pwd_error_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="55dp"
+                android:textSize="12dp"
+                android:textColor="@color/blue"
+                android:text="8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요."/>
 
         </FrameLayout>
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_height="5dp"
                 android:layout_marginLeft="40dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginRight="40dp"
-                app:srcCompat="@drawable/join_line"/>
+                app:srcCompat="@drawable/join_line" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/applefont"
                 android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
                 android:textSize="16dp"
-                android:text="신분증"/>
+                android:text="비밀번호 확인"/>
+
+            <EditText
+                android:id="@+id/pwdcheckText"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/applefont"
+                android:gravity="center"
+
+                android:scrollbars="horizontal"
+                android:textSize="16dp" />
+
+            <ImageButton
+                android:id="@+id/pwdcheckBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/white"
+                app:srcCompat="@drawable/join_lock"
+                android:layout_marginLeft="330dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/pwdcheck_error_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="55dp"
+                android:textSize="12dp"
+                android:textColor="@color/blue"
+                android:text="비밀번호가 일치하지 않습니다."/>
 
         </FrameLayout>
 
+        <ImageButton
+            android:id="@+id/confirmBtn"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/join_bluebtn"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@color/white"
+            android:padding="0dp"
+             />
 
 
     </LinearLayout>

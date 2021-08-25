@@ -32,6 +32,7 @@
         <activity android:name=".Game1Activity"></activity>
         <activity android:name=".Game2Activity"></activity>
         <activity android:name=".Game3Activity"></activity>
+        <activity android:name=".JoinActivity"></activity>
 
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>

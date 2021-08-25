@@ -76,6 +76,12 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        var joinBtn = findViewById<ImageButton>(R.id.join)
+        joinBtn.setOnClickListener() {
+            val intent = Intent(this, JoinActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 

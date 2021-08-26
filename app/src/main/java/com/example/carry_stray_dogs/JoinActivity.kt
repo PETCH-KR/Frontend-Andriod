@@ -1,5 +1,6 @@
 package com.example.carry_stray_dogs
 
+import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -10,18 +11,27 @@ import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.ActionBar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.regex.Pattern
 
 class JoinActivity : AppCompatActivity() {
+
+    //Retrofit
+    val retrofit: Retrofit = Retrofit.Builder()
+        .baseUrl( "https://ziho-dev.com/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+    val apiService = retrofit.create(RetrofitAPI::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -94,10 +104,12 @@ class JoinActivity : AppCompatActivity() {
             var pattern : Pattern = android.util.Patterns.EMAIL_ADDRESS
             if(emailText.text.toString()=="" || !pattern.matcher(emailText.text.toString()).matches()){
                 //email err
+                emailErr.text = "이메일을 정확하게 입력해주세요."
                 emailErr.visibility=View.VISIBLE
                 error = true
             }
             else{
+                emailErr.text = "이메일을 정확하게 입력해주세요."
                 emailErr.visibility=View.GONE
             }
             if(!Pattern.matches("^(?=.*\\d)(?=.*[~`!@#$%\\^&*()-])(?=.*[a-zA-Z]).{8,20}$", pwdText.text.toString())){
@@ -129,9 +141,35 @@ class JoinActivity : AppCompatActivity() {
                 nameErr.visibility=View.GONE
             }
 
+
             if(!error){
                 //서버 연동 (이메일 중복,회원가입 확인)
-                Log.i("join","success")
+                var signup: HashMap<String, String> = HashMap()
+                signup.put("email", emailText.text.toString())
+                signup.put("password", pwdText.text.toString())
+                val intent = Intent(this, LoginActivity::class.java)
+
+                apiService.singupAPI(signup)?.enqueue(object : Callback<Post?> {
+                    override fun onFailure(call: Call<Post?>, t: Throwable) {
+                        Log.d(ContentValues.TAG, "실패 : {${t}}")
+                    }
+                    override fun onResponse(call: Call<Post?>, response: Response<Post?>) {
+                        if(response.body()?.success==true){
+                            Log.i("join","success")
+                            Log.i("join", response.body()!!.message.toString())
+                            startActivity(intent)
+                        }
+                        else{
+                            Log.i("join","fail")
+                            Log.i("join",response.code().toString())
+                            if(response.code()==400){
+                                emailErr.text = "이미 사용중인 이메일입니다."
+                                emailErr.visibility=View.VISIBLE
+                            }
+                        }
+                    }
+                })
+
             }
 
         }

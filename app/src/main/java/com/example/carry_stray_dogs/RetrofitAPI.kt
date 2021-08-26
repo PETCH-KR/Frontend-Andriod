@@ -10,4 +10,8 @@ interface RetrofitAPI {
     @POST("api/user/kakao")
     fun kakaosingupAPI(@FieldMap param: HashMap<String, String>): Call<Post?>?
 
+    @FormUrlEncoded
+    @POST("api/user/signup")
+    fun singupAPI(@FieldMap param: HashMap<String, String>): Call<Post?>?
+
 }

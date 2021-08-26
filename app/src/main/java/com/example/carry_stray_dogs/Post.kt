@@ -15,7 +15,6 @@ class Post {
     @SerializedName("data")
     private val dataList: data = data()
     fun getDataList(): data? { return dataList }
-
     class data {
 
         @SerializedName("access_token")
@@ -28,6 +27,13 @@ class Post {
         val email: String? = null
 
     }
+
+    //usersiginup
+    @SerializedName("email")
+    val email: String? = null
+
+    @SerializedName("password")
+    val password: String? = null
 
 }
 

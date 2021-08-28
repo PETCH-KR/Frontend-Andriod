@@ -27,13 +27,13 @@
                 app:srcCompat="@drawable/game1_text" />
 
             <ImageButton
-                android:id="@+id/nextBtn"
-                android:layout_width="50dp"
-                android:layout_marginLeft="183dp"
+                android:id="@+id/cancelBtn"
+                android:layout_width="30dp"
+                android:layout_marginLeft="200dp"
                 android:layout_height="38dp"
                 android:backgroundTint="@color/white"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/game1_nextbtn" />
+                app:srcCompat="@drawable/game_cancel" />
 
         </LinearLayout>
 

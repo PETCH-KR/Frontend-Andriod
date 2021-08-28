@@ -31,20 +31,66 @@ class Game1Activity : AppCompatActivity(){
 
         var answerBtn = findViewById<ImageButton>(R.id.answer)
         var wrongBtn = findViewById<ImageButton>(R.id.wrong)
-        var nextBtn = findViewById<ImageButton>(R.id.nextBtn)
+        var cancelBtn = findViewById<ImageButton>(R.id.cancelBtn)
         var question = findViewById<ImageView>(R.id.question)
 
         answerBtn.setOnClickListener(){
             answerBtn.setImageResource(R.drawable.game1_answercheck)
             wrongBtn.setImageResource(R.drawable.game1_false)
             Log.i("answerBtn: ","click")
+
+            answerBtn.setImageResource(R.drawable.game1_answercheck)
+            wrongBtn.setImageResource(R.drawable.game1_false)
+            question.visibility = View.INVISIBLE
+
+            Log.i("nextBtn: ","click")
+
+            val builder = AlertDialog.Builder(this)
+            val view: View = LayoutInflater.from(this).inflate(R.layout.activity_answer1, null)
+            dialog = builder.create()
+            dialog!!.setView(view)
+            dialog!!.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+            CoroutineScope(Main).launch {
+                dialog!!.show()
+                delay(3000)
+                dialog!!.dismiss()
+                changeView()
+            }
         }
         wrongBtn.setOnClickListener(){
-            answerBtn.setImageResource(R.drawable.game1_true)
-            wrongBtn.setImageResource(R.drawable.game1_answerfalse)
-            Log.i("wrongBtn: ","click")
+
+            CoroutineScope(Main).launch {
+                answerBtn.setImageResource(R.drawable.game1_true)
+                wrongBtn.setImageResource(R.drawable.game1_answerfalse)
+                Log.i("wrongBtn: ","click")
+                delay(1000)
+                answerBtn.setImageResource(R.drawable.game1_answercheck)
+                wrongBtn.setImageResource(R.drawable.game1_false)
+                question.visibility = View.INVISIBLE
+                Log.i("nextBtn: ","click")
+            }
+
+            val builder = AlertDialog.Builder(this)
+            val view: View = LayoutInflater.from(this).inflate(R.layout.activity_answer1, null)
+            dialog = builder.create()
+            dialog!!.setView(view)
+            dialog!!.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+            CoroutineScope(Main).launch {
+                dialog!!.show()
+                delay(3000)
+                dialog!!.dismiss()
+                changeView()
+            }
         }
-        nextBtn.setOnClickListener(){
+        cancelBtn.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        /*
             answerBtn.setImageResource(R.drawable.game1_answercheck)
             wrongBtn.setImageResource(R.drawable.game1_false)
             question.visibility = View.INVISIBLE
@@ -65,6 +111,8 @@ class Game1Activity : AppCompatActivity(){
             }
 
         }
+
+         */
 
     }
     fun changeView(){

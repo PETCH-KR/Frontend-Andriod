@@ -35,5 +35,8 @@ class Post {
     @SerializedName("password")
     val password: String? = null
 
+    @SerializedName("certify_num")
+    val certify_num: String? = null
+
 }
 

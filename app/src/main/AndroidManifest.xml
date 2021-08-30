@@ -33,6 +33,11 @@
         <activity android:name=".Game2Activity"></activity>
         <activity android:name=".Game3Activity"></activity>
         <activity android:name=".JoinActivity"></activity>
+        <activity android:name=".NicknameActivity"></activity>
+        <activity android:name=".FindPwdActivity1"></activity>
+        <activity android:name=".FindPwdActivity2"></activity>
+        <activity android:name=".FindPwdActivity3"></activity>
+
 
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>

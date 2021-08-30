@@ -4,6 +4,7 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
@@ -80,6 +81,12 @@ class LoginActivity : AppCompatActivity() {
         var joinBtn = findViewById<ImageButton>(R.id.join)
         joinBtn.setOnClickListener() {
             val intent = Intent(this, JoinActivity::class.java)
+            startActivity(intent)
+        }
+
+        var findpwd = findViewById<Button>(R.id.findpwd)
+        findpwd.setOnClickListener() {
+            val intent = Intent(this, FindPwdActivity1::class.java)
             startActivity(intent)
         }
     }

@@ -49,22 +49,19 @@ class JoinActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        var joinBtn = findViewById<ImageButton>(R.id.confirmBtn)
+        var joinBtn = findViewById<ImageButton>(R.id.nextBtn)
         var emailText = findViewById<EditText>(R.id.emailText)
         var pwdText = findViewById<EditText>(R.id.pwdText)
         var pwdcheckText = findViewById<EditText>(R.id.pwdcheckText)
-        var nameText = findViewById<EditText>(R.id.nameText)
         var emailErr = findViewById<TextView>(R.id.email_error_msg)
         var pwdErr = findViewById<TextView>(R.id.pwd_error_msg)
         var pwdcheckErr = findViewById<TextView>(R.id.pwdcheck_error_msg)
-        var nameErr = findViewById<TextView>(R.id.name_error_msg)
         var pwdBtn = findViewById<ImageButton>(R.id.pwdBtn)
         var pwdcheckBtn = findViewById<ImageButton>(R.id.pwdcheckBtn)
 
         emailErr.visibility=View.GONE
         pwdErr.visibility=View.GONE
         pwdcheckErr.visibility=View.GONE
-        nameErr.visibility=View.GONE
 
         pwdText.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
         pwdText.transformationMethod = PasswordTransformationMethod.getInstance()
@@ -132,31 +129,23 @@ class JoinActivity : AppCompatActivity() {
                 pwdcheckErr.visibility=View.GONE
                 pwdcheckBtn.setImageResource(R.drawable.join_lock)
             }
-            if(nameText.text.toString()==""){
-                //name err
-                nameErr.visibility=View.VISIBLE
-                error = true
-            }
-            else{
-                nameErr.visibility=View.GONE
-            }
 
 
             if(!error){
-                //서버 연동 (이메일 중복,회원가입 확인)
+                //서버 연동 (이메일 중복 확인)
                 var signup: HashMap<String, String> = HashMap()
                 signup.put("email", emailText.text.toString())
-                signup.put("password", pwdText.text.toString())
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, NicknameActivity::class.java)
 
-                apiService.singupAPI(signup)?.enqueue(object : Callback<Post?> {
+                apiService.emailcheckAPI(signup)?.enqueue(object : Callback<Post?> {
                     override fun onFailure(call: Call<Post?>, t: Throwable) {
                         Log.d(ContentValues.TAG, "실패 : {${t}}")
                     }
                     override fun onResponse(call: Call<Post?>, response: Response<Post?>) {
                         if(response.body()?.success==true){
-                            Log.i("join","success")
-                            Log.i("join", response.body()!!.message.toString())
+                            Log.i("중복 이메일 확인: ","success")
+                            intent.putExtra("email",emailText.text.toString())
+                            intent.putExtra("password",pwdText.text.toString())
                             startActivity(intent)
                         }
                         else{

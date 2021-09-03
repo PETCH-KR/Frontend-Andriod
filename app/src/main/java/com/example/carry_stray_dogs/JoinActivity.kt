@@ -142,6 +142,7 @@ class JoinActivity : AppCompatActivity() {
                         Log.d(ContentValues.TAG, "실패 : {${t}}")
                     }
                     override fun onResponse(call: Call<Post?>, response: Response<Post?>) {
+                        Log.i("중복이메일API: ",response.message())
                         if(response.body()?.success==true){
                             Log.i("중복 이메일 확인: ","success")
                             intent.putExtra("email",emailText.text.toString())

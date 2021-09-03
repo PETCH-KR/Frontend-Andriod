@@ -45,7 +45,7 @@ class NicknameActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_nickname)
 
-        var backBtn = findViewById<ImageButton>(R.id.backBtn)
+        var backBtn = findViewById<ImageButton>(R.id.cancelBtn)
         backBtn.setOnClickListener {
             val intent = Intent(this,JoinActivity::class.java)
             startActivity(intent)
@@ -64,9 +64,9 @@ class NicknameActivity : AppCompatActivity() {
 
         joinBtn.setOnClickListener {
 
-            //서버 연동 (이메일 중복 확인)
+            //서버 연동 (회원가입)
             var signup: HashMap<String, String> = HashMap()
-            signup.put("nick", nickText.text.toString())
+            signup.put("name", nickText.text.toString())
             signup.put("email", intent.getStringExtra("email").toString())
             signup.put("password",intent.getStringExtra("password").toString())
 

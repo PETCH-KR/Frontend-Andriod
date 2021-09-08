@@ -96,13 +96,16 @@ class FindPwdActivity3 : AppCompatActivity() {
 
 
             if(!error){
-                //서버 연동 (비밀번호 찾기기)
+                //서버 연동 (비밀번호 변경)
                 var renew_pwd: HashMap<String, String> = HashMap()
-                getIntent.getStringExtra("email")?.let { it1 -> renew_pwd.put("email", it1) }
-                renew_pwd.put("password", pwdText.text.toString())
+                var email = getIntent.getStringExtra("email")
+                if (email != null) {
+                    renew_pwd.put("email", email)
+                }
+                renew_pwd.put("new_password", pwdText.text.toString())
                 val intent = Intent(this, LoginActivity::class.java)
 
-                apiService.emailcheckAPI(renew_pwd)?.enqueue(object : Callback<Post?> {
+                apiService.resetpwdAPI(renew_pwd)?.enqueue(object : Callback<Post?> {
                     override fun onFailure(call: Call<Post?>, t: Throwable) {
                         Log.d(ContentValues.TAG, "실패 : {${t}}")
                     }

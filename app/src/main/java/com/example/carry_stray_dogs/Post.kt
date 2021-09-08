@@ -26,6 +26,8 @@ class Post {
         @SerializedName("email")
         val email: String? = null
 
+        @SerializedName("verified_number")
+        val verified_number: String? = null
     }
 
     //usersiginup
@@ -35,8 +37,6 @@ class Post {
     @SerializedName("password")
     val password: String? = null
 
-    @SerializedName("certify_num")
-    val certify_num: String? = null
 
 }
 

@@ -68,21 +68,28 @@ class FindPwdActivity1 : AppCompatActivity() {
                 emailErr.visibility=View.GONE
 
                 //서버 연동 (인증전송 확인)
-                var certify_email: HashMap<String, String> = HashMap()
-                certify_email.put("email", emailText.text.toString())
+                var find_pwd: HashMap<String, String> = HashMap()
+                find_pwd.put("email", emailText.text.toString())
 
 
                 val intent = Intent(this, FindPwdActivity2::class.java)
 
-                apiService.singupAPI(certify_email)?.enqueue(object : Callback<Post?> {
+                apiService.findpwdAPI(find_pwd)?.enqueue(object : Callback<Post?> {
                     override fun onFailure(call: Call<Post?>, t: Throwable) {
                         Log.d(ContentValues.TAG, "실패 : {${t}}")
                     }
                     override fun onResponse(call: Call<Post?>, response: Response<Post?>) {
                         if(response.body()?.success==true){
                             Log.i("인증번호 전송: ","success")
+                            response.body()!!.getDataList()?.verified_number?.let { it1 ->
+                                Log.i("인증번호: ",
+                                    it1
+                                )
+                            }
                             intent.putExtra("email",emailText.text.toString())
-                            intent.putExtra("certify_num", response.body()!!.certify_num)
+                            intent.putExtra("certify_num",
+                                response.body()!!.getDataList()?.verified_number
+                            )
                             startActivity(intent)
                         }
                         else{

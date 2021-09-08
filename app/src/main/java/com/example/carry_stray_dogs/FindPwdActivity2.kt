@@ -59,11 +59,15 @@ class FindPwdActivity2 : AppCompatActivity() {
 
         certifyBtn.setOnClickListener {
 
-              if(getIntent.getStringExtra("certify_num")?.equals(certifyText.text) == true){
+              if(getIntent.getStringExtra("certify_num")==certifyText.text.toString()){
                   Log.i("인증번호 확인: ","success")
                   val intent = Intent(this,FindPwdActivity3::class.java)
                   intent.putExtra("email",getIntent.getStringExtra("email"))
                   startActivity(intent)
+              }
+            else{
+                  Log.i("인증번호 확인: ","fail")
+                  certifyErr.visibility=View.VISIBLE
               }
 
 

@@ -103,7 +103,7 @@ class FindPwdActivity3 : AppCompatActivity() {
                     renew_pwd.put("email", email)
                 }
                 renew_pwd.put("new_password", pwdText.text.toString())
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, FindPwdActivity4::class.java)
 
                 apiService.resetpwdAPI(renew_pwd)?.enqueue(object : Callback<Post?> {
                     override fun onFailure(call: Call<Post?>, t: Throwable) {
@@ -113,6 +113,7 @@ class FindPwdActivity3 : AppCompatActivity() {
                         if(response.body()?.success==true){
                             Log.i("비밀번호 변경: ","success")
                             startActivity(intent)
+                            finish()
                         }
                         else{
                             Log.i("비밀번호 변경: ","fail")

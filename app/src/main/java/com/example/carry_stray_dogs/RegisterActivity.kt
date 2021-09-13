@@ -1,5 +1,6 @@
 package com.example.carry_stray_dogs
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -41,6 +42,7 @@ class RegisterActivity : Fragment() {
     var dog_name: String? = null
     var dog_care: String? = null
 
+    @SuppressLint("ResourceType")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -87,6 +89,96 @@ class RegisterActivity : Fragment() {
         //날짜
         start_date.text = "2021.01.01"
         end_date.text ="2021.01.01"
+
+        //check
+        val dog_check = view.findViewById<ImageButton>(R.id.dog_check)
+        dog_check.id = 0
+        val dog_check2 = view.findViewById<ImageButton>(R.id.dog_check2)
+        dog_check2.id = 0
+        val dog_check3 = view.findViewById<ImageButton>(R.id.dog_check3)
+        dog_check3.id = 0
+        val dog_check4 = view.findViewById<ImageButton>(R.id.dog_check4)
+        dog_check4.id = 0
+
+        dog_check.setOnClickListener{
+            if(dog_check.id==0){
+                dog_check.setImageResource(R.drawable.info_checked)
+                dog_check.id = 1
+            }
+            else{
+                dog_check.setImageResource(R.drawable.info_unchecked)
+                dog_check.id = 0
+            }
+        }
+        dog_check2.setOnClickListener{
+            if(dog_check2.id==0){
+                dog_check2.setImageResource(R.drawable.info_checked)
+                dog_check2.id = 1
+            }
+            else{
+                dog_check2.setImageResource(R.drawable.info_unchecked)
+                dog_check2.id = 0
+            }
+        }
+        dog_check3.setOnClickListener{
+            if(dog_check3.id==0){
+                dog_check3.setImageResource(R.drawable.info_checked)
+                dog_check3.id = 1
+            }
+            else{
+                dog_check3.setImageResource(R.drawable.info_unchecked)
+                dog_check3.id = 0
+            }
+        }
+        dog_check4.setOnClickListener{
+            if(dog_check4.id==0){
+                dog_check4.setImageResource(R.drawable.info_checked)
+                dog_check4.id = 1
+            }
+            else{
+                dog_check4.setImageResource(R.drawable.info_unchecked)
+                dog_check4.id = 0
+            }
+        }
+
+        val list1_check = view.findViewById<ImageButton>(R.id.list1_check)
+        list1_check.id = 0
+        val list2_check = view.findViewById<ImageButton>(R.id.list2_check)
+        list2_check.id = 0
+        val list3_check = view.findViewById<ImageButton>(R.id.list3_check)
+        list3_check.id = 0
+
+        list1_check.setOnClickListener{
+            if(list1_check.id==0){
+                list1_check.setImageResource(R.drawable.info_checked)
+                list1_check.id = 1
+            }
+            else{
+                list1_check.setImageResource(R.drawable.info_unchecked)
+                list1_check.id = 0
+            }
+        }
+        list2_check.setOnClickListener{
+            if(list2_check.id==0){
+                list2_check.setImageResource(R.drawable.info_checked)
+                list2_check.id = 1
+            }
+            else{
+                list2_check.setImageResource(R.drawable.info_unchecked)
+                list2_check.id = 0
+            }
+        }
+        list3_check.setOnClickListener{
+            if(list3_check.id==0){
+                list3_check.setImageResource(R.drawable.info_checked)
+                list3_check.id = 1
+            }
+            else{
+                list3_check.setImageResource(R.drawable.info_unchecked)
+                list3_check.id = 0
+            }
+        }
+
 
         return view
     }

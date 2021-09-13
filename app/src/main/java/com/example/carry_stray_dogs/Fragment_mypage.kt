@@ -1,6 +1,7 @@
 package com.example.carry_stray_dogs
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils.replace
 import android.view.LayoutInflater
@@ -36,6 +37,12 @@ class Fragment_mypage : Fragment(){
 
         val tab = view.findViewById<TabLayout>(R.id.tabLayout)
         tab.setupWithViewPager(viewPager)
+
+        val logoutBtn = view.findViewById<ImageButton>(R.id.logoutBtn)
+        logoutBtn.setOnClickListener{
+            val intent = Intent(activity, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
         userImage = view.findViewById(R.id.userImageBtn)
 

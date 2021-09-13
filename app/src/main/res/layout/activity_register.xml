@@ -426,30 +426,103 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="10dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:background="#f5f5f5"/>
-                <TextView
-                    android:layout_width="300dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="25dp"
+                        android:background="#f5f5f5"
+                        android:fontFamily="@font/applefont"
+                        android:text="" />
+
+                    <ImageButton
+                        android:id="@+id/dog_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/info_unchecked" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:background="#f5f5f5"/>
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="25dp"
+                        android:background="#f5f5f5"
+                        android:fontFamily="@font/applefont"
+                        android:text="" />
+
+                    <ImageButton
+                        android:id="@+id/dog_check2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/info_unchecked" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:background="#f5f5f5"/>
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="25dp"
+                        android:background="#f5f5f5"
+                        android:fontFamily="@font/applefont"
+                        android:text="" />
+
+                    <ImageButton
+                        android:id="@+id/dog_check3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/info_unchecked" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:background="#f5f5f5"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="25dp"
+                        android:background="#f5f5f5"
+                        android:fontFamily="@font/applefont"
+                        android:text="" />
+
+                    <ImageButton
+                        android:id="@+id/dog_check4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/info_unchecked" />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -575,12 +648,13 @@
                             android:fontFamily="@font/applefont"
                             android:text="" />
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/list1_check"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="50dp"
-                            android:src="@drawable/info_checked" />
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/info_unchecked" />
 
                     </LinearLayout>
 
@@ -599,11 +673,12 @@
                             android:fontFamily="@font/applefont"
                             android:text="" />
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/list2_check"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="50dp"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/info_unchecked" />
 
                     </LinearLayout>
@@ -624,11 +699,12 @@
                             android:fontFamily="@font/applefont"
                             android:text="" />
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/list3_check"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="50dp"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/info_unchecked" />
 
                     </LinearLayout>

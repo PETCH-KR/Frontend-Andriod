@@ -37,6 +37,66 @@ class Fragment_list_2 : Fragment(){
             transaction.commit()
         }
 
+        var dot1 : ImageButton = view.findViewById(R.id.dot1)
+        var dot2 : ImageButton = view.findViewById(R.id.dot2)
+        var dot3 : ImageButton = view.findViewById(R.id.dot3)
+        var dot4 : ImageButton = view.findViewById(R.id.dot4)
+        var image_dot1 : ImageView = view.findViewById(R.id.image_dot1)
+        var image_dot2 : ImageView = view.findViewById(R.id.image_dot2)
+        var image_dot3 : ImageView = view.findViewById(R.id.image_dot3)
+        var image_dot4 : ImageView = view.findViewById(R.id.image_dot4)
+        image_dot2.visibility=View.INVISIBLE
+        image_dot3.visibility=View.INVISIBLE
+        image_dot4.visibility=View.INVISIBLE
+
+        dot1.setOnClickListener{
+            dot1.setImageResource(R.drawable.list_bluedot)
+            dot2.setImageResource(R.drawable.list_whitedot)
+            dot3.setImageResource(R.drawable.list_whitedot)
+            dot4.setImageResource(R.drawable.list_whitedot)
+
+            image_dot1.visibility=View.VISIBLE
+            image_dot2.visibility=View.INVISIBLE
+            image_dot3.visibility=View.INVISIBLE
+            image_dot4.visibility=View.INVISIBLE
+
+        }
+        dot2.setOnClickListener{
+            dot2.setImageResource(R.drawable.list_bluedot)
+            dot1.setImageResource(R.drawable.list_whitedot)
+            dot3.setImageResource(R.drawable.list_whitedot)
+            dot4.setImageResource(R.drawable.list_whitedot)
+
+            image_dot2.visibility=View.VISIBLE
+            image_dot1.visibility=View.INVISIBLE
+            image_dot3.visibility=View.INVISIBLE
+            image_dot4.visibility=View.INVISIBLE
+        }
+        dot3.setOnClickListener{
+            dot3.setImageResource(R.drawable.list_bluedot)
+            dot2.setImageResource(R.drawable.list_whitedot)
+            dot1.setImageResource(R.drawable.list_whitedot)
+            dot4.setImageResource(R.drawable.list_whitedot)
+
+            image_dot3.visibility=View.VISIBLE
+            image_dot2.visibility=View.INVISIBLE
+            image_dot1.visibility=View.INVISIBLE
+            image_dot4.visibility=View.INVISIBLE
+        }
+        dot4.setOnClickListener{
+            dot4.setImageResource(R.drawable.list_bluedot)
+            dot2.setImageResource(R.drawable.list_whitedot)
+            dot3.setImageResource(R.drawable.list_whitedot)
+            dot1.setImageResource(R.drawable.list_whitedot)
+
+            image_dot4.visibility=View.VISIBLE
+            image_dot2.visibility=View.INVISIBLE
+            image_dot3.visibility=View.INVISIBLE
+            image_dot1.visibility=View.INVISIBLE
+        }
+
+
+
 
         return view
     }

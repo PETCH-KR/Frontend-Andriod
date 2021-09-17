@@ -44,13 +44,16 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/imageView2"
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="2"
-                android:src="@drawable/splash_blank" />
+                android:gravity="center"
+                android:textSize="16dp"
+                android:text="국내에서 구조된 소중한 아이들.\n
+그 중 해외로 입양된 아이들을 안전하게\n가족들에게 데려다 주는 것을 말해요." />
 
         </LinearLayout>
 

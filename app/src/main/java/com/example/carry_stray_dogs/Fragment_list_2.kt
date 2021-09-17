@@ -45,6 +45,8 @@ class Fragment_list_2 : Fragment(){
         var image_dot2 : ImageView = view.findViewById(R.id.image_dot2)
         var image_dot3 : ImageView = view.findViewById(R.id.image_dot3)
         var image_dot4 : ImageView = view.findViewById(R.id.image_dot4)
+
+        var cal_image : ImageView = view.findViewById(R.id.cal_image)
         image_dot2.visibility=View.INVISIBLE
         image_dot3.visibility=View.INVISIBLE
         image_dot4.visibility=View.INVISIBLE
@@ -54,6 +56,7 @@ class Fragment_list_2 : Fragment(){
             dot2.setImageResource(R.drawable.list_whitedot)
             dot3.setImageResource(R.drawable.list_whitedot)
             dot4.setImageResource(R.drawable.list_whitedot)
+            cal_image.setImageResource(R.drawable.cal_1)
 
             image_dot1.visibility=View.VISIBLE
             image_dot2.visibility=View.INVISIBLE
@@ -66,6 +69,7 @@ class Fragment_list_2 : Fragment(){
             dot1.setImageResource(R.drawable.list_whitedot)
             dot3.setImageResource(R.drawable.list_whitedot)
             dot4.setImageResource(R.drawable.list_whitedot)
+            cal_image.setImageResource(R.drawable.cal_2)
 
             image_dot2.visibility=View.VISIBLE
             image_dot1.visibility=View.INVISIBLE
@@ -77,6 +81,7 @@ class Fragment_list_2 : Fragment(){
             dot2.setImageResource(R.drawable.list_whitedot)
             dot1.setImageResource(R.drawable.list_whitedot)
             dot4.setImageResource(R.drawable.list_whitedot)
+            cal_image.setImageResource(R.drawable.cal_3)
 
             image_dot3.visibility=View.VISIBLE
             image_dot2.visibility=View.INVISIBLE
@@ -88,6 +93,7 @@ class Fragment_list_2 : Fragment(){
             dot2.setImageResource(R.drawable.list_whitedot)
             dot3.setImageResource(R.drawable.list_whitedot)
             dot1.setImageResource(R.drawable.list_whitedot)
+            cal_image.setImageResource(R.drawable.cal_4)
 
             image_dot4.visibility=View.VISIBLE
             image_dot2.visibility=View.INVISIBLE

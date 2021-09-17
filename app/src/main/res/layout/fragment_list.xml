@@ -57,7 +57,7 @@
             android:layout_height="270dp"
             android:backgroundTint="@color/white"
             android:scaleType="centerInside"
-            android:src="@drawable/list_guide1" />
+            android:src="@drawable/blank" />
 
     </LinearLayout>
 

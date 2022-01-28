@@ -46,7 +46,7 @@ class MyPagerAdapter(var context: Context) : PagerAdapter(){
         else if(position==2){
             imageView.setImageResource(R.drawable.splash_3);
             textView.text="쉽고 정확한 의사소통"
-            text.text="해외 입양 기관이 봉사를 수락하면\n간단한 안내와 봉사 과정을 공유하는\n채팅방이 개설될거에요!"
+            text.text="담당 입양 기관이 봉사를 수락하면\n간단한 안내와 봉사 과정을 공유하는\n채팅방이 개설될거에요!"
             goBtn.visibility = View.INVISIBLE
         }
         else {

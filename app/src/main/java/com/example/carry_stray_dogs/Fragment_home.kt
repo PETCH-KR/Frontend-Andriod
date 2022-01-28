@@ -13,14 +13,20 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentTransaction
 import kotlinx.android.synthetic.main.activity_flightsearch.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class Fragment_home : Fragment() {
 
     private var myContext: FragmentActivity? = null
+    var dialog : AlertDialog ?=null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -75,13 +81,17 @@ class Fragment_home : Fragment() {
             }
         }
 
+        study.setOnClickListener {
+            // viewpager + dialog
+        }
+
+
     }
 
     override fun onAttach(activity: Activity) {
         myContext = activity as FragmentActivity
         super.onAttach(activity)
     }
-
 
 
 }

@@ -47,7 +47,7 @@ class FindPwdActivity2 : AppCompatActivity() {
 
         var backBtn = findViewById<ImageButton>(R.id.backBtn)
         backBtn.setOnClickListener {
-            val intent = Intent(this,FindPwdActivity2::class.java)
+            val intent = Intent(this,FindPwdActivity1::class.java)
             startActivity(intent)
         }
 
